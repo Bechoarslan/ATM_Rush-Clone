@@ -8,7 +8,7 @@ namespace Runtime.Commands
 {
     public class LevelLoaderCommand : ICommand
     {
-        private LevelManager _levelManager;
+        private readonly LevelManager _levelManager;
 
         public LevelLoaderCommand(LevelManager levelManager)
         {
@@ -20,7 +20,7 @@ namespace Runtime.Commands
             var resourceRequest = Resources.LoadAsync<GameObject>($"Prefabs/LevelPrefabs/level {parameter}");
             resourceRequest.completed += operation =>
             {
-                var newLevel = Object.Instantiate(ComponentHolderProtocol.GameObject(resourceRequest.asset),
+                var newLevel = Object.Instantiate(resourceRequest.asset.GameObject(),
                     Vector3.zero, Quaternion.identity);
                 if (newLevel != null) newLevel.transform.SetParent(_levelManager.levelHolder.transform);
             };

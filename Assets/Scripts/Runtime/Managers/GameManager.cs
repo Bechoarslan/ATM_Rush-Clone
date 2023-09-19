@@ -29,14 +29,24 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void OnEnable()
     {
+        SubscribeEvent();
+    }
+
+    private void SubscribeEvent()
+    {
         CoreGameSignals.Instance.onChangeGameStates += OnChangeGameState;
     }
 
     private void OnDisable()
     {
+        UnSubscribeEvent();
+    }
+
+    private void UnSubscribeEvent()
+    {
         CoreGameSignals.Instance.onChangeGameStates -= OnChangeGameState;
     }
-    
+
     private void OnChangeGameState(GameStates newState)
     {
         States = newState;
