@@ -30,18 +30,16 @@ MonoBehaviour:
     serializationDepthLimit: 64
     assemblyNames:
     - Assembly-CSharp-firstpass
-    - sc.stylizedwater2.runtime
     - Assembly-CSharp
     - Cinemachine
-    - Boxophobic.Utils.Editor
     - MoreMountains.NiceVibrations.Haptics
     - PPv2URPConverters
-    - Boxophobic.PolyverseSkies.Editor
+    - Boxophobic.Utils.Editor
     - MoreMountains.NiceVibrations.Demos
     - Boxophobic.Utils.Scripts
-    - sc.stylizedwater2.editor
-    - MoreMountains.NiceVibrations.Editor
+    - Boxophobic.PolyverseSkies.Editor
     - MoreMountains.NiceVibrations
+    - MoreMountains.NiceVibrations.Editor
     - Boxophobic.PolyverseSkies.Runtime
     - Boxophobic.PolyverseSkies.Scripts
     - Sirenix.OdinInspector.Modules.UnityMathematics

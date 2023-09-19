@@ -1,6 +1,6 @@
-﻿using Cinemachine;
+using Runtime.Enums;
 using Runtime.Signals;
-using Unity.Mathematics;
+using Signals;
 using UnityEngine;
 
 namespace Runtime.Managers
@@ -11,27 +11,13 @@ namespace Runtime.Managers
 
         #region Serialized Variables
 
-        [SerializeField] private CinemachineVirtualCamera virtualCamera;
-
-        #endregion
-
-        #region Private Variables
-
-        private float3 _firstPosition;
+        [SerializeField] private Animator animator;
 
         #endregion
 
         #endregion
 
-        private void Start()
-        {
-            Init();
-        }
-
-        private void Init()
-        {
-            _firstPosition = transform.position;
-        }
+        #region Event Subscriptions
 
         private void OnEnable()
         {
@@ -40,31 +26,31 @@ namespace Runtime.Managers
 
         private void SubscribeEvents()
         {
-            CameraSignals.Instance.onSetCameraTarget += OnSetCameraTarget;
             CoreGameSignals.Instance.onReset += OnReset;
+            CameraSignals.Instance.onChangeCameraState += OnChangeCameraState;
         }
 
-        private void OnSetCameraTarget()
+        private void UnsubscribeEvents()
         {
-            var player = FindObjectOfType<PlayerManager>().transform;
-            virtualCamera.Follow = player;
-            //virtualCamera.LookAt = player;
-        }
-
-        private void OnReset()
-        {
-            transform.position = _firstPosition;
-        }
-
-        private void UnSubscribeEvents()
-        {
-            CameraSignals.Instance.onSetCameraTarget -= OnSetCameraTarget;
             CoreGameSignals.Instance.onReset -= OnReset;
+            CameraSignals.Instance.onChangeCameraState -= OnChangeCameraState;
         }
 
         private void OnDisable()
         {
-            UnSubscribeEvents();
+            UnsubscribeEvents();
+        }
+
+        #endregion
+
+        private void OnChangeCameraState(CameraStates state)
+        {
+            animator.SetTrigger(state.ToString());
+        }
+
+        private void OnReset()
+        {
+            CameraSignals.Instance.onChangeCameraState?.Invoke(CameraStates.Idle);
         }
     }
 }

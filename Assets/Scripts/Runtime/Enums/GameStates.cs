@@ -1,9 +1,7 @@
-namespace Enums
+namespace Runtime.Enums
 {
     public enum GameStates
     {
-        Idle,
-        Moving,
-        Final
+        
     }
 }

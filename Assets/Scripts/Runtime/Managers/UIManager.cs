@@ -1,78 +1,96 @@
-using Runtime.Enums;
+﻿using Runtime.Enums;
 using Runtime.Signals;
+using Signals;
 using UnityEngine;
 
 namespace Runtime.Managers
 {
     public class UIManager : MonoBehaviour
     {
+        #region Self Variables
+
+        #region Public Variables
+
+        #endregion
+
+        #region Serialized Variables
+
+        #endregion
+
+        #region Private Variables
+
+        #endregion
+
+        #endregion
+
         private void OnEnable()
         {
-            SubscribeEvents();
-        }
-
-        private void SubscribeEvents()
-        {
             CoreGameSignals.Instance.onLevelInitialize += OnLevelInitialize;
-            CoreGameSignals.Instance.onLevelSuccessful += OnLevelSuccessful;
-            CoreGameSignals.Instance.onLevelFailed += OnLevelFailed;
             CoreGameSignals.Instance.onReset += OnReset;
-            CoreGameSignals.Instance.onStageAreaSuccessful += OnStageAreaSuccessful;
+            CoreGameSignals.Instance.onLevelFailed += OnLevelFailed;
+            CoreGameSignals.Instance.onLevelSuccessful += OnLevelSuccessful;
+
+            OpenStartPanel();
         }
 
-        private void UnSubscribeEvents()
+        private void OpenStartPanel()
         {
-            CoreGameSignals.Instance.onLevelInitialize -= OnLevelInitialize;
-            CoreGameSignals.Instance.onLevelSuccessful -= OnLevelSuccessful;
-            CoreGameSignals.Instance.onLevelFailed -= OnLevelFailed;
-            CoreGameSignals.Instance.onReset -= OnReset;
-            CoreGameSignals.Instance.onStageAreaSuccessful -= OnStageAreaSuccessful;
+            CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Start, 1);
         }
 
         private void OnDisable()
         {
-            UnSubscribeEvents();
+            CoreGameSignals.Instance.onLevelInitialize -= OnLevelInitialize;
+            CoreGameSignals.Instance.onReset -= OnReset;
+            CoreGameSignals.Instance.onLevelFailed -= OnLevelFailed;
+            CoreGameSignals.Instance.onLevelSuccessful -= OnLevelSuccessful;
         }
 
-        private void OnLevelInitialize(byte levelValue)
+
+        private void OnLevelInitialize(int levelValue)
         {
             CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Level, 0);
-            UISignals.Instance.onSetLevelValue?.Invoke(levelValue);
+            UISignals.Instance.onSetNewLevelValue?.Invoke((int)levelValue);
         }
 
-        private void OnLevelSuccessful()
+        public void OnPlay()
+        {
+            CoreGameSignals.Instance.onPlay?.Invoke();
+            CoreUISignals.Instance.onClosePanel?.Invoke(1);
+            //CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Throw, 1);
+            //CameraSignals.Instance.onChangeCameraState?.Invoke(CameraStates.Throw);
+        }
+
+        private void OnOpenWinPanel()
         {
             CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Win, 2);
         }
 
-        private void OnLevelFailed()
+        private void OnOpenFailPanel()
         {
             CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Fail, 2);
         }
 
-        public void NextLevel()
+        public void OnNextLevel()
         {
             CoreGameSignals.Instance.onNextLevel?.Invoke();
             CoreGameSignals.Instance.onReset?.Invoke();
         }
 
-        public void RestartLevel()
+        public void OnRestartLevel()
         {
             CoreGameSignals.Instance.onRestartLevel?.Invoke();
             CoreGameSignals.Instance.onReset?.Invoke();
         }
 
-        public void Play()
+        private void OnLevelFailed()
         {
-            UISignals.Instance.onPlay?.Invoke();
-            CoreUISignals.Instance.onClosePanel?.Invoke(1);
-            InputSignals.Instance.onEnableInput?.Invoke();
-            CameraSignals.Instance.onSetCameraTarget?.Invoke();
+            OnOpenFailPanel();
         }
 
-        private void OnStageAreaSuccessful(byte stageValue)
+        private void OnLevelSuccessful()
         {
-            UISignals.Instance.onSetStageColor?.Invoke(stageValue);
+            OnOpenWinPanel();
         }
 
         private void OnReset()

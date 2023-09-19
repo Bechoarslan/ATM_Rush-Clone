@@ -5,6 +5,8 @@ namespace Runtime.Enums
         Start,
         Level,
         Win,
-        Fail
+        Fail,
+
+        //*ADDITION*//
     }
 }
