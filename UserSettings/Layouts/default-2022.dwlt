@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Console Pro
+  m_Title: Aify UI
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 143
+  controlID: 139
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,13 +138,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 280
+    width: 591
     height: 939
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &7
@@ -164,9 +164,9 @@ MonoBehaviour:
   - {fileID: 11}
   m_Position:
     serializedVersion: 2
-    x: 280
+    x: 591
     y: 0
-    width: 1038
+    width: 761
     height: 939
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
@@ -191,8 +191,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1038
-    height: 510
+    width: 761
+    height: 524
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
@@ -214,15 +214,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 765
-    height: 510
+    width: 486
+    height: 524
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 2
 --- !u!114 &10
@@ -240,15 +240,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 765
+    x: 486
     y: 0
-    width: 273
-    height: 510
+    width: 275
+    height: 524
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 19}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &11
@@ -269,13 +269,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 510
-    width: 1038
-    height: 429
+    y: 524
+    width: 761
+    height: 415
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 79
+  controlID: 86
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -293,18 +293,18 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 436
-    height: 429
+    width: 357
+    height: 415
   m_MinSize: {x: 202, y: 141}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 21}
   m_Panes:
-  - {fileID: 20}
   - {fileID: 21}
   - {fileID: 22}
   - {fileID: 23}
   - {fileID: 24}
   - {fileID: 25}
+  - {fileID: 26}
   m_Selected: 0
   m_LastSelected: 3
 --- !u!114 &13
@@ -322,15 +322,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 436
+    x: 357
     y: 0
-    width: 602
-    height: 429
+    width: 404
+    height: 415
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 26}
+  m_ActualView: {fileID: 27}
   m_Panes:
-  - {fileID: 26}
+  - {fileID: 27}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &14
@@ -343,25 +343,62 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: AifyEditor
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1318
+    x: 1352
     y: 0
-    width: 602
+    width: 568
     height: 939
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 27}
+  m_MinSize: {x: 501, y: 521}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 27}
   - {fileID: 28}
   - {fileID: 29}
-  m_Selected: 0
-  m_LastSelected: 1
+  - {fileID: 30}
+  - {fileID: 15}
+  m_Selected: 3
+  m_LastSelected: 0
 --- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d60604e5cda8c747b675c3b380d8e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 500, y: 500}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Aify UI
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1352
+    y: 73
+    width: 567
+    height: 918
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  initImage: {fileID: 0}
+  forUpscale: {fileID: 0}
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -383,7 +420,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 279
+    width: 590
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -401,7 +438,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 279, y: 897}
+  m_TargetSize: {x: 1080, y: 1920}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -410,16 +447,16 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000500000005000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 07000000000000000500000005000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -139.5
-    m_HBaseRangeMax: 139.5
-    m_VBaseRangeMin: -448.5
-    m_VBaseRangeMax: 448.5
+    m_HBaseRangeMin: -540
+    m_HBaseRangeMax: 540
+    m_VBaseRangeMin: -960
+    m_VBaseRangeMax: 960
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -437,29 +474,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 279
+      width: 590
       height: 897
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 139.5, y: 448.5}
+    m_Scale: {x: 0.46718752, y: 0.4671875}
+    m_Translation: {x: 295, y: 448.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -139.5
-      y: -448.5
-      width: 279
-      height: 897
+      x: -631.4381
+      y: -960
+      width: 1262.8762
+      height: 1920
     m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 279, y: 918}
+  m_defaultScale: 0.4671875
+  m_LastWindowPixelSize: {x: 590, y: 918}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000101000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -479,10 +516,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 280
+    x: 591
     y: 73
-    width: 763
-    height: 489
+    width: 484
+    height: 503
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -497,8 +534,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -101, y: -26}
-      snapOffsetDelta: {x: -70, y: 0}
+      snapOffset: {x: -171, y: -26}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -537,7 +574,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 1
       id: unity-search-toolbar
       index: 1
@@ -589,7 +626,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Light Settings
       index: 0
@@ -615,7 +652,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Cloth Constraints
       index: 1
@@ -628,7 +665,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Cloth Collisions
       index: 2
@@ -680,7 +717,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Occlusion Culling
       index: 3
@@ -693,7 +730,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Physics Debugger
       index: 4
@@ -706,7 +743,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Scene Visibility
       index: 5
@@ -719,7 +756,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 25}
       snapCorner: 0
       id: Scene View/Particles
       index: 6
@@ -731,9 +768,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 48, y: 48}
+      snapOffset: {x: -216, y: -300}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 3
       id: AINavigationOverlay
       index: 7
       layout: 4
@@ -781,17 +818,17 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
-  m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 1
+  m_OverrideSceneCullingMask: 0
+  m_SceneIsLit: 0
   m_SceneLighting: 1
-  m_2DMode: 0
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 536.8414, y: 960, z: 0}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 89.951416, y: 602.44324, z: -61.642395}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -802,7 +839,7 @@ MonoBehaviour:
   m_SceneViewState:
     m_AlwaysRefresh: 0
     showFog: 1
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -837,17 +874,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: -0.0000000039260986, y: 0.0000000700348, z: -0.000000009641663, w: -0.99999994}
   m_Size:
-    m_Target: 10
+    m_Target: 1152.6409
     speed: 2
-    m_Value: 10
+    m_Value: 1103.0056
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 2
     m_SpeedNormalized: 1
@@ -861,14 +898,14 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.0671661, y: 0.9324867, z: -0.2374173, w: -0.26380396}
+  m_LastSceneViewRotation: {x: -0.05143464, y: 0.91750497, z: -0.12631252, w: -0.37360922}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_SceneVisActive: 0
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -938,7 +975,7 @@ MonoBehaviour:
   m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -972,7 +1009,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &19
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -992,10 +1029,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1045
+    x: 1077
     y: 73
-    width: 271
-    height: 489
+    width: 273
+    height: 503
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1009,9 +1046,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4e680000
+      m_SelectedIDs: ec9a0000
       m_LastClickedID: 0
-      m_ExpandedIDs: daf5fffff4f5ffff0cf6ffff30f6ffffbaf8ffffc0f8ffffc4f8ffffcaf8ffffd0f8ffffd2f8ffffd4f8ffffdcf8ffffe2f8ffff0afbffff
+      m_ExpandedIDs: 36d5feff46d5feff02d7000006d7000024d7000048d70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1035,7 +1072,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &20
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1055,10 +1092,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 280
-    y: 583
-    width: 434
-    height: 408
+    x: 591
+    y: 597
+    width: 355
+    height: 394
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1069,20 +1106,2320 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  logPanelScroll: {x: 0, y: 0}
+  logPanelScroll: {x: 0, y: -155}
   logPanelSelectedIndex: -1
   logPanelAutoScroll: 1
-  currentFrame: 808306
+  currentFrame: 867596
   logs:
-    lastGrabbedIndex: -1
-    lastGrabbedCount: 0
-    proEntries: []
+    lastGrabbedIndex: 0
+    lastGrabbedCount: 1
+    proEntries:
+    - logType: 1
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 0
+      logOutputHeight: 42
+      listIndex: 0
+      nativeIndex: 0
+      nativeIdentifier: 0
+      originalUnityConsoleLog: 'HTTP/1.1 500 Internal Server Error
+
+        UnityEngine.Debug:Log
+        (object)'
+      originalLog: '[04:55:12] HTTP/1.1 500 Internal Server Error
+
+        UnityEngine.Debug:Log
+        (object)'
+      originalStackTrace: 'HTTP/1.1 500 Internal Server Error
+
+        UnityEngine.Debug:Log
+        (object)
+
+        AiKodex.AifyEditor/<Post>d__89:MoveNext () (at Assets/Aify/Editor/Scripts/AifyEditor.cs:1063)
+
+        Unity.EditorCoroutines.Editor.EditorCoroutine/YieldProcessor:MoveNext
+        (System.Collections.IEnumerator) (at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:80)
+
+        Unity.EditorCoroutines.Editor.EditorCoroutine:ProcessIEnumeratorRecursive
+        (System.Collections.IEnumerator) (at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:134)
+
+        Unity.EditorCoroutines.Editor.EditorCoroutine:MoveNext
+        () (at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:115)
+
+        UnityEditor.EditorApplication:Internal_CallUpdateFunctions
+        ()
+
+'
+      nativeFileName: Assets/Aify/Editor/Scripts/AifyEditor.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 1063
+      watchName: 
+      logText: '[04:55:12] HTTP/1.1 500 Internal Server Error
+
+        UnityEngine.Debug:Log
+        (object)'
+      logTruncatedText: '[04:55:12] HTTP/1.1 500 Internal Server Error
+
+        UnityEngine.Debug:Log
+        (object)'
+      logColumnText: '[04:55:12] HTTP/1.1 500 Internal Server Error
+
+        UnityEngine.Debug:Log
+        (object)'
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 2
+      hasSourceCode: 1
+      timeStamp: 04:55:12
+      timeFrame: -1
+      timeStampDateTimeNow: 
+      instanceID: 0
+      collapsedCount: 1
+      cachedHeight: 34
+      cachedHeightLogWidth: 311
+      stackEntries:
+      - fileName: Assets/Aify/Editor/Scripts/AifyEditor.cs
+        fileNameWithoutAssets: Aify/Editor/Scripts/AifyEditor.cs
+        fileNameWithoutAssetsPlusLineNumber: Aify/Editor/Scripts/AifyEditor.cs:1063
+        fileNameWithoutPath: AifyEditor.cs
+        fileNameWithoutPathPlusLineNumber: AifyEditor.cs:1063
+        fileNamePretty: AifyEditor
+        instanceID: -1
+        className: AifyEditor/<Post>d__89
+        methodName: MoveNext
+        namespaceName: AiKodex
+        lineNumberString: 1063
+        charNumber: 0
+        stackLabel: AifyEditor/<Post>d__89.MoveNext()
+        stackLabel2: ' at /Aify/Editor/Scripts/AifyEditor.cs:1063'
+        stackLabel1Content:
+          m_Text: AifyEditor/<Post>d__89.MoveNext()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 216
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Aify/Editor/Scripts/AifyEditor.cs:1063'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 249
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - '1061:  <Color=#FF0000>if</Color> <Color=#808080>(</Color>request.result
+          != UnityWebRequest.Result.Success<Color=#808080>)</Color>'
+        - '1062:  <Color=#808080>{</Color>'
+        - '1063:      Debug.Log<Color=#808080>(</Color>request.error<Color=#808080>)</Color><Color=#808080>;</Color>'
+        - '1064:  <Color=#808080>}</Color>'
+        - '1065:  else'
+        sourceCodeUpdated: 1
+        sourceCodeHighlightIndex: 2
+        showSource: 1
+        keywordTokens:
+        - abstract
+        - add
+        - alias
+        - as
+        - ascending
+        - async
+        - await
+        - base
+        - bool
+        - break
+        - by
+        - byte
+        - case
+        - catch
+        - char
+        - checked
+        - class
+        - const
+        - continue
+        - decimal
+        - default
+        - delegate
+        - descending
+        - do
+        - double
+        - dynamic
+        - else
+        - enum
+        - equals
+        - event
+        - explicit
+        - extern
+        - false
+        - finally
+        - fixed
+        - float
+        - for
+        - foreach
+        - from
+        - get
+        - global
+        - goto
+        - group
+        - if
+        - implicit
+        - in
+        - int
+        - interface
+        - internal
+        - into
+        - is
+        - join
+        - let
+        - lock
+        - long
+        - nameof
+        - namespace
+        - new
+        - null
+        - object
+        - on
+        - operator
+        - orderby
+        - out
+        - override
+        - params
+        - partial
+        - private
+        - protected
+        - public
+        - readonly
+        - ref
+        - remove
+        - return
+        - sbyte
+        - sealed
+        - select
+        - set
+        - short
+        - sizeof
+        - stackalloc
+        - static
+        - string
+        - struct
+        - switch
+        - this
+        - throw
+        - true
+        - try
+        - typeof
+        - uint
+        - ulong
+        - unchecked
+        - unsafe
+        - ushort
+        - using
+        - value
+        - var
+        - virtual
+        - void
+        - volatile
+        - when
+        - where
+        - while
+        - yield
+      - fileName: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs
+        fileNameWithoutAssets: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs
+        fileNameWithoutAssetsPlusLineNumber: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:80
+        fileNameWithoutPath: EditorCoroutine.cs
+        fileNameWithoutPathPlusLineNumber: EditorCoroutine.cs:80
+        fileNamePretty: EditorCoroutine
+        instanceID: -1
+        className: EditorCoroutine/YieldProcessor
+        methodName: MoveNext
+        namespaceName: Unity.EditorCoroutines.Editor
+        lineNumberString: 80
+        charNumber: 0
+        stackLabel: EditorCoroutine/YieldProcessor.MoveNext()
+        stackLabel2: ' at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:80'
+        stackLabel1Content:
+          m_Text: EditorCoroutine/YieldProcessor.MoveNext()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 259
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:80'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 536
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - '  78:  <Color=#808080>{</Color>'
+        - '  79:      data = <Color=#FF0000>default</Color><Color=#808080>(</Color>ProcessorData<Color=#808080>)</Color><Color=#808080>;</Color> '
+        - '  80:      <Color=#FF0000>return</Color> enumerator.MoveNext<Color=#808080>(</Color><Color=#808080>)</Color><Color=#808080>;</Color>'
+        - '  81:  <Color=#808080>}</Color>'
+        - '  82:  <Color=#FF0000>return</Color> <Color=#FF0000>true</Color><Color=#808080>;</Color>'
+        sourceCodeUpdated: 1
+        sourceCodeHighlightIndex: 2
+        showSource: 1
+        keywordTokens:
+        - abstract
+        - add
+        - alias
+        - as
+        - ascending
+        - async
+        - await
+        - base
+        - bool
+        - break
+        - by
+        - byte
+        - case
+        - catch
+        - char
+        - checked
+        - class
+        - const
+        - continue
+        - decimal
+        - default
+        - delegate
+        - descending
+        - do
+        - double
+        - dynamic
+        - else
+        - enum
+        - equals
+        - event
+        - explicit
+        - extern
+        - false
+        - finally
+        - fixed
+        - float
+        - for
+        - foreach
+        - from
+        - get
+        - global
+        - goto
+        - group
+        - if
+        - implicit
+        - in
+        - int
+        - interface
+        - internal
+        - into
+        - is
+        - join
+        - let
+        - lock
+        - long
+        - nameof
+        - namespace
+        - new
+        - null
+        - object
+        - on
+        - operator
+        - orderby
+        - out
+        - override
+        - params
+        - partial
+        - private
+        - protected
+        - public
+        - readonly
+        - ref
+        - remove
+        - return
+        - sbyte
+        - sealed
+        - select
+        - set
+        - short
+        - sizeof
+        - stackalloc
+        - static
+        - string
+        - struct
+        - switch
+        - this
+        - throw
+        - true
+        - try
+        - typeof
+        - uint
+        - ulong
+        - unchecked
+        - unsafe
+        - ushort
+        - using
+        - value
+        - var
+        - virtual
+        - void
+        - volatile
+        - when
+        - where
+        - while
+        - yield
+      - fileName: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs
+        fileNameWithoutAssets: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs
+        fileNameWithoutAssetsPlusLineNumber: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:134
+        fileNameWithoutPath: EditorCoroutine.cs
+        fileNameWithoutPathPlusLineNumber: EditorCoroutine.cs:134
+        fileNamePretty: EditorCoroutine
+        instanceID: -1
+        className: EditorCoroutine
+        methodName: ProcessIEnumeratorRecursive
+        namespaceName: Unity.EditorCoroutines.Editor
+        lineNumberString: 134
+        charNumber: 0
+        stackLabel: EditorCoroutine.ProcessIEnumeratorRecursive()
+        stackLabel2: ' at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:134'
+        stackLabel1Content:
+          m_Text: EditorCoroutine.ProcessIEnumeratorRecursive()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 282
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:134'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 542
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - ' 132:  <Color=#00FF00>//process leaf</Color>'
+        - ' 133:  m_Processor.Set<Color=#808080>(</Color>enumerator.Current<Color=#808080>)</Color><Color=#808080>;</Color>'
+        - ' 134:  <Color=#FF0000>var</Color> result = m_Processor.MoveNext<Color=#808080>(</Color>enumerator<Color=#808080>)</Color><Color=#808080>;</Color>'
+        - ' 136:  <Color=#FF0000>while</Color> <Color=#808080>(</Color>kIEnumeratorProcessingStack.Count
+          > <Color=#FFFFFF>1</Color><Color=#808080>)</Color>'
+        sourceCodeUpdated: 1
+        sourceCodeHighlightIndex: 2
+        showSource: 1
+        keywordTokens:
+        - abstract
+        - add
+        - alias
+        - as
+        - ascending
+        - async
+        - await
+        - base
+        - bool
+        - break
+        - by
+        - byte
+        - case
+        - catch
+        - char
+        - checked
+        - class
+        - const
+        - continue
+        - decimal
+        - default
+        - delegate
+        - descending
+        - do
+        - double
+        - dynamic
+        - else
+        - enum
+        - equals
+        - event
+        - explicit
+        - extern
+        - false
+        - finally
+        - fixed
+        - float
+        - for
+        - foreach
+        - from
+        - get
+        - global
+        - goto
+        - group
+        - if
+        - implicit
+        - in
+        - int
+        - interface
+        - internal
+        - into
+        - is
+        - join
+        - let
+        - lock
+        - long
+        - nameof
+        - namespace
+        - new
+        - null
+        - object
+        - on
+        - operator
+        - orderby
+        - out
+        - override
+        - params
+        - partial
+        - private
+        - protected
+        - public
+        - readonly
+        - ref
+        - remove
+        - return
+        - sbyte
+        - sealed
+        - select
+        - set
+        - short
+        - sizeof
+        - stackalloc
+        - static
+        - string
+        - struct
+        - switch
+        - this
+        - throw
+        - true
+        - try
+        - typeof
+        - uint
+        - ulong
+        - unchecked
+        - unsafe
+        - ushort
+        - using
+        - value
+        - var
+        - virtual
+        - void
+        - volatile
+        - when
+        - where
+        - while
+        - yield
+      - fileName: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs
+        fileNameWithoutAssets: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs
+        fileNameWithoutAssetsPlusLineNumber: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:115
+        fileNameWithoutPath: EditorCoroutine.cs
+        fileNameWithoutPathPlusLineNumber: EditorCoroutine.cs:115
+        fileNamePretty: EditorCoroutine
+        instanceID: -1
+        className: EditorCoroutine
+        methodName: MoveNext
+        namespaceName: Unity.EditorCoroutines.Editor
+        lineNumberString: 115
+        charNumber: 0
+        stackLabel: EditorCoroutine.MoveNext()
+        stackLabel2: ' at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:115'
+        stackLabel1Content:
+          m_Text: EditorCoroutine.MoveNext()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 165
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:115'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 540
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - ' 113:  <Color=#808080>}</Color>'
+        - ' 115:  <Color=#FF0000>bool</Color> done = ProcessIEnumeratorRecursive<Color=#808080>(</Color>m_Routine<Color=#808080>)</Color><Color=#808080>;</Color>'
+        - ' 116:  m_IsDone = !done<Color=#808080>;</Color>'
+        sourceCodeUpdated: 1
+        sourceCodeHighlightIndex: 1
+        showSource: 1
+        keywordTokens:
+        - abstract
+        - add
+        - alias
+        - as
+        - ascending
+        - async
+        - await
+        - base
+        - bool
+        - break
+        - by
+        - byte
+        - case
+        - catch
+        - char
+        - checked
+        - class
+        - const
+        - continue
+        - decimal
+        - default
+        - delegate
+        - descending
+        - do
+        - double
+        - dynamic
+        - else
+        - enum
+        - equals
+        - event
+        - explicit
+        - extern
+        - false
+        - finally
+        - fixed
+        - float
+        - for
+        - foreach
+        - from
+        - get
+        - global
+        - goto
+        - group
+        - if
+        - implicit
+        - in
+        - int
+        - interface
+        - internal
+        - into
+        - is
+        - join
+        - let
+        - lock
+        - long
+        - nameof
+        - namespace
+        - new
+        - null
+        - object
+        - on
+        - operator
+        - orderby
+        - out
+        - override
+        - params
+        - partial
+        - private
+        - protected
+        - public
+        - readonly
+        - ref
+        - remove
+        - return
+        - sbyte
+        - sealed
+        - select
+        - set
+        - short
+        - sizeof
+        - stackalloc
+        - static
+        - string
+        - struct
+        - switch
+        - this
+        - throw
+        - true
+        - try
+        - typeof
+        - uint
+        - ulong
+        - unchecked
+        - unsafe
+        - ushort
+        - using
+        - value
+        - var
+        - virtual
+        - void
+        - volatile
+        - when
+        - where
+        - while
+        - yield
+      - fileName: None
+        fileNameWithoutAssets: None
+        fileNameWithoutAssetsPlusLineNumber: None
+        fileNameWithoutPath: None
+        fileNameWithoutPathPlusLineNumber: None
+        fileNamePretty: None
+        instanceID: -1
+        className: EditorApplication
+        methodName: Internal_CallUpdateFunctions
+        namespaceName: UnityEditor
+        lineNumberString: 0
+        charNumber: 0
+        stackLabel: EditorApplication.Internal_CallUpdateFunctions()
+        stackLabel2: 
+        stackLabel1Content:
+          m_Text: EditorApplication.Internal_CallUpdateFunctions()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 288
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 1
+        sourceCodeHighlightIndex: -1
+        showSource: 1
+        keywordTokens:
+        - abstract
+        - add
+        - alias
+        - as
+        - ascending
+        - async
+        - await
+        - base
+        - bool
+        - break
+        - by
+        - byte
+        - case
+        - catch
+        - char
+        - checked
+        - class
+        - const
+        - continue
+        - decimal
+        - default
+        - delegate
+        - descending
+        - do
+        - double
+        - dynamic
+        - else
+        - enum
+        - equals
+        - event
+        - explicit
+        - extern
+        - false
+        - finally
+        - fixed
+        - float
+        - for
+        - foreach
+        - from
+        - get
+        - global
+        - goto
+        - group
+        - if
+        - implicit
+        - in
+        - int
+        - interface
+        - internal
+        - into
+        - is
+        - join
+        - let
+        - lock
+        - long
+        - nameof
+        - namespace
+        - new
+        - null
+        - object
+        - on
+        - operator
+        - orderby
+        - out
+        - override
+        - params
+        - partial
+        - private
+        - protected
+        - public
+        - readonly
+        - ref
+        - remove
+        - return
+        - sbyte
+        - sealed
+        - select
+        - set
+        - short
+        - sizeof
+        - stackalloc
+        - static
+        - string
+        - struct
+        - switch
+        - this
+        - throw
+        - true
+        - try
+        - typeof
+        - uint
+        - ulong
+        - unchecked
+        - unsafe
+        - ushort
+        - using
+        - value
+        - var
+        - virtual
+        - void
+        - volatile
+        - when
+        - where
+        - while
+        - yield
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 1c64a82a-3a2b-4818-806d-d66b3c0ea679
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 8dee9d0a-4fce-483b-8658-136ce51071d8
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: a116ad91-0983-4e98-bef4-55e8a3006287
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: eef98b92-59cc-450c-81de-6957e386f303
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 1c64a82a-3a2b-4818-806d-d66b3c0ea679
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 8dee9d0a-4fce-483b-8658-136ce51071d8
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: a116ad91-0983-4e98-bef4-55e8a3006287
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: eef98b92-59cc-450c-81de-6957e386f303
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
     newEntries: []
     resetCompilerErrorEntries: 1
     compilerErrorEntries: []
     timeFrames: 
-    _filteredEntries: []
---- !u!114 &21
+    _filteredEntries:
+    - logType: 1
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 0
+      logOutputHeight: 42
+      listIndex: 0
+      nativeIndex: 0
+      nativeIdentifier: 0
+      originalUnityConsoleLog: 'HTTP/1.1 500 Internal Server Error
+
+        UnityEngine.Debug:Log
+        (object)'
+      originalLog: '[04:55:12] HTTP/1.1 500 Internal Server Error
+
+        UnityEngine.Debug:Log
+        (object)'
+      originalStackTrace: 'HTTP/1.1 500 Internal Server Error
+
+        UnityEngine.Debug:Log
+        (object)
+
+        AiKodex.AifyEditor/<Post>d__89:MoveNext () (at Assets/Aify/Editor/Scripts/AifyEditor.cs:1063)
+
+        Unity.EditorCoroutines.Editor.EditorCoroutine/YieldProcessor:MoveNext
+        (System.Collections.IEnumerator) (at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:80)
+
+        Unity.EditorCoroutines.Editor.EditorCoroutine:ProcessIEnumeratorRecursive
+        (System.Collections.IEnumerator) (at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:134)
+
+        Unity.EditorCoroutines.Editor.EditorCoroutine:MoveNext
+        () (at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:115)
+
+        UnityEditor.EditorApplication:Internal_CallUpdateFunctions
+        ()
+
+'
+      nativeFileName: Assets/Aify/Editor/Scripts/AifyEditor.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 1063
+      watchName: 
+      logText: '[04:55:12] HTTP/1.1 500 Internal Server Error
+
+        UnityEngine.Debug:Log
+        (object)'
+      logTruncatedText: '[04:55:12] HTTP/1.1 500 Internal Server Error
+
+        UnityEngine.Debug:Log
+        (object)'
+      logColumnText: '[04:55:12] HTTP/1.1 500 Internal Server Error
+
+        UnityEngine.Debug:Log
+        (object)'
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 2
+      hasSourceCode: 1
+      timeStamp: 04:55:12
+      timeFrame: -1
+      timeStampDateTimeNow: 
+      instanceID: 0
+      collapsedCount: 1
+      cachedHeight: 34
+      cachedHeightLogWidth: 311
+      stackEntries:
+      - fileName: Assets/Aify/Editor/Scripts/AifyEditor.cs
+        fileNameWithoutAssets: Aify/Editor/Scripts/AifyEditor.cs
+        fileNameWithoutAssetsPlusLineNumber: Aify/Editor/Scripts/AifyEditor.cs:1063
+        fileNameWithoutPath: AifyEditor.cs
+        fileNameWithoutPathPlusLineNumber: AifyEditor.cs:1063
+        fileNamePretty: AifyEditor
+        instanceID: -1
+        className: AifyEditor/<Post>d__89
+        methodName: MoveNext
+        namespaceName: AiKodex
+        lineNumberString: 1063
+        charNumber: 0
+        stackLabel: AifyEditor/<Post>d__89.MoveNext()
+        stackLabel2: ' at /Aify/Editor/Scripts/AifyEditor.cs:1063'
+        stackLabel1Content:
+          m_Text: AifyEditor/<Post>d__89.MoveNext()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 216
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Aify/Editor/Scripts/AifyEditor.cs:1063'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 249
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - '1061:  <Color=#FF0000>if</Color> <Color=#808080>(</Color>request.result
+          != UnityWebRequest.Result.Success<Color=#808080>)</Color>'
+        - '1062:  <Color=#808080>{</Color>'
+        - '1063:      Debug.Log<Color=#808080>(</Color>request.error<Color=#808080>)</Color><Color=#808080>;</Color>'
+        - '1064:  <Color=#808080>}</Color>'
+        - '1065:  else'
+        sourceCodeUpdated: 1
+        sourceCodeHighlightIndex: 2
+        showSource: 1
+        keywordTokens:
+        - abstract
+        - add
+        - alias
+        - as
+        - ascending
+        - async
+        - await
+        - base
+        - bool
+        - break
+        - by
+        - byte
+        - case
+        - catch
+        - char
+        - checked
+        - class
+        - const
+        - continue
+        - decimal
+        - default
+        - delegate
+        - descending
+        - do
+        - double
+        - dynamic
+        - else
+        - enum
+        - equals
+        - event
+        - explicit
+        - extern
+        - false
+        - finally
+        - fixed
+        - float
+        - for
+        - foreach
+        - from
+        - get
+        - global
+        - goto
+        - group
+        - if
+        - implicit
+        - in
+        - int
+        - interface
+        - internal
+        - into
+        - is
+        - join
+        - let
+        - lock
+        - long
+        - nameof
+        - namespace
+        - new
+        - null
+        - object
+        - on
+        - operator
+        - orderby
+        - out
+        - override
+        - params
+        - partial
+        - private
+        - protected
+        - public
+        - readonly
+        - ref
+        - remove
+        - return
+        - sbyte
+        - sealed
+        - select
+        - set
+        - short
+        - sizeof
+        - stackalloc
+        - static
+        - string
+        - struct
+        - switch
+        - this
+        - throw
+        - true
+        - try
+        - typeof
+        - uint
+        - ulong
+        - unchecked
+        - unsafe
+        - ushort
+        - using
+        - value
+        - var
+        - virtual
+        - void
+        - volatile
+        - when
+        - where
+        - while
+        - yield
+      - fileName: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs
+        fileNameWithoutAssets: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs
+        fileNameWithoutAssetsPlusLineNumber: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:80
+        fileNameWithoutPath: EditorCoroutine.cs
+        fileNameWithoutPathPlusLineNumber: EditorCoroutine.cs:80
+        fileNamePretty: EditorCoroutine
+        instanceID: -1
+        className: EditorCoroutine/YieldProcessor
+        methodName: MoveNext
+        namespaceName: Unity.EditorCoroutines.Editor
+        lineNumberString: 80
+        charNumber: 0
+        stackLabel: EditorCoroutine/YieldProcessor.MoveNext()
+        stackLabel2: ' at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:80'
+        stackLabel1Content:
+          m_Text: EditorCoroutine/YieldProcessor.MoveNext()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 259
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:80'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 536
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - '  78:  <Color=#808080>{</Color>'
+        - '  79:      data = <Color=#FF0000>default</Color><Color=#808080>(</Color>ProcessorData<Color=#808080>)</Color><Color=#808080>;</Color> '
+        - '  80:      <Color=#FF0000>return</Color> enumerator.MoveNext<Color=#808080>(</Color><Color=#808080>)</Color><Color=#808080>;</Color>'
+        - '  81:  <Color=#808080>}</Color>'
+        - '  82:  <Color=#FF0000>return</Color> <Color=#FF0000>true</Color><Color=#808080>;</Color>'
+        sourceCodeUpdated: 1
+        sourceCodeHighlightIndex: 2
+        showSource: 1
+        keywordTokens:
+        - abstract
+        - add
+        - alias
+        - as
+        - ascending
+        - async
+        - await
+        - base
+        - bool
+        - break
+        - by
+        - byte
+        - case
+        - catch
+        - char
+        - checked
+        - class
+        - const
+        - continue
+        - decimal
+        - default
+        - delegate
+        - descending
+        - do
+        - double
+        - dynamic
+        - else
+        - enum
+        - equals
+        - event
+        - explicit
+        - extern
+        - false
+        - finally
+        - fixed
+        - float
+        - for
+        - foreach
+        - from
+        - get
+        - global
+        - goto
+        - group
+        - if
+        - implicit
+        - in
+        - int
+        - interface
+        - internal
+        - into
+        - is
+        - join
+        - let
+        - lock
+        - long
+        - nameof
+        - namespace
+        - new
+        - null
+        - object
+        - on
+        - operator
+        - orderby
+        - out
+        - override
+        - params
+        - partial
+        - private
+        - protected
+        - public
+        - readonly
+        - ref
+        - remove
+        - return
+        - sbyte
+        - sealed
+        - select
+        - set
+        - short
+        - sizeof
+        - stackalloc
+        - static
+        - string
+        - struct
+        - switch
+        - this
+        - throw
+        - true
+        - try
+        - typeof
+        - uint
+        - ulong
+        - unchecked
+        - unsafe
+        - ushort
+        - using
+        - value
+        - var
+        - virtual
+        - void
+        - volatile
+        - when
+        - where
+        - while
+        - yield
+      - fileName: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs
+        fileNameWithoutAssets: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs
+        fileNameWithoutAssetsPlusLineNumber: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:134
+        fileNameWithoutPath: EditorCoroutine.cs
+        fileNameWithoutPathPlusLineNumber: EditorCoroutine.cs:134
+        fileNamePretty: EditorCoroutine
+        instanceID: -1
+        className: EditorCoroutine
+        methodName: ProcessIEnumeratorRecursive
+        namespaceName: Unity.EditorCoroutines.Editor
+        lineNumberString: 134
+        charNumber: 0
+        stackLabel: EditorCoroutine.ProcessIEnumeratorRecursive()
+        stackLabel2: ' at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:134'
+        stackLabel1Content:
+          m_Text: EditorCoroutine.ProcessIEnumeratorRecursive()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 282
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:134'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 542
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - ' 132:  <Color=#00FF00>//process leaf</Color>'
+        - ' 133:  m_Processor.Set<Color=#808080>(</Color>enumerator.Current<Color=#808080>)</Color><Color=#808080>;</Color>'
+        - ' 134:  <Color=#FF0000>var</Color> result = m_Processor.MoveNext<Color=#808080>(</Color>enumerator<Color=#808080>)</Color><Color=#808080>;</Color>'
+        - ' 136:  <Color=#FF0000>while</Color> <Color=#808080>(</Color>kIEnumeratorProcessingStack.Count
+          > <Color=#FFFFFF>1</Color><Color=#808080>)</Color>'
+        sourceCodeUpdated: 1
+        sourceCodeHighlightIndex: 2
+        showSource: 1
+        keywordTokens:
+        - abstract
+        - add
+        - alias
+        - as
+        - ascending
+        - async
+        - await
+        - base
+        - bool
+        - break
+        - by
+        - byte
+        - case
+        - catch
+        - char
+        - checked
+        - class
+        - const
+        - continue
+        - decimal
+        - default
+        - delegate
+        - descending
+        - do
+        - double
+        - dynamic
+        - else
+        - enum
+        - equals
+        - event
+        - explicit
+        - extern
+        - false
+        - finally
+        - fixed
+        - float
+        - for
+        - foreach
+        - from
+        - get
+        - global
+        - goto
+        - group
+        - if
+        - implicit
+        - in
+        - int
+        - interface
+        - internal
+        - into
+        - is
+        - join
+        - let
+        - lock
+        - long
+        - nameof
+        - namespace
+        - new
+        - null
+        - object
+        - on
+        - operator
+        - orderby
+        - out
+        - override
+        - params
+        - partial
+        - private
+        - protected
+        - public
+        - readonly
+        - ref
+        - remove
+        - return
+        - sbyte
+        - sealed
+        - select
+        - set
+        - short
+        - sizeof
+        - stackalloc
+        - static
+        - string
+        - struct
+        - switch
+        - this
+        - throw
+        - true
+        - try
+        - typeof
+        - uint
+        - ulong
+        - unchecked
+        - unsafe
+        - ushort
+        - using
+        - value
+        - var
+        - virtual
+        - void
+        - volatile
+        - when
+        - where
+        - while
+        - yield
+      - fileName: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs
+        fileNameWithoutAssets: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs
+        fileNameWithoutAssetsPlusLineNumber: ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:115
+        fileNameWithoutPath: EditorCoroutine.cs
+        fileNameWithoutPathPlusLineNumber: EditorCoroutine.cs:115
+        fileNamePretty: EditorCoroutine
+        instanceID: -1
+        className: EditorCoroutine
+        methodName: MoveNext
+        namespaceName: Unity.EditorCoroutines.Editor
+        lineNumberString: 115
+        charNumber: 0
+        stackLabel: EditorCoroutine.MoveNext()
+        stackLabel2: ' at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:115'
+        stackLabel1Content:
+          m_Text: EditorCoroutine.MoveNext()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 165
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at ./Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs:115'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 540
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - ' 113:  <Color=#808080>}</Color>'
+        - ' 115:  <Color=#FF0000>bool</Color> done = ProcessIEnumeratorRecursive<Color=#808080>(</Color>m_Routine<Color=#808080>)</Color><Color=#808080>;</Color>'
+        - ' 116:  m_IsDone = !done<Color=#808080>;</Color>'
+        sourceCodeUpdated: 1
+        sourceCodeHighlightIndex: 1
+        showSource: 1
+        keywordTokens:
+        - abstract
+        - add
+        - alias
+        - as
+        - ascending
+        - async
+        - await
+        - base
+        - bool
+        - break
+        - by
+        - byte
+        - case
+        - catch
+        - char
+        - checked
+        - class
+        - const
+        - continue
+        - decimal
+        - default
+        - delegate
+        - descending
+        - do
+        - double
+        - dynamic
+        - else
+        - enum
+        - equals
+        - event
+        - explicit
+        - extern
+        - false
+        - finally
+        - fixed
+        - float
+        - for
+        - foreach
+        - from
+        - get
+        - global
+        - goto
+        - group
+        - if
+        - implicit
+        - in
+        - int
+        - interface
+        - internal
+        - into
+        - is
+        - join
+        - let
+        - lock
+        - long
+        - nameof
+        - namespace
+        - new
+        - null
+        - object
+        - on
+        - operator
+        - orderby
+        - out
+        - override
+        - params
+        - partial
+        - private
+        - protected
+        - public
+        - readonly
+        - ref
+        - remove
+        - return
+        - sbyte
+        - sealed
+        - select
+        - set
+        - short
+        - sizeof
+        - stackalloc
+        - static
+        - string
+        - struct
+        - switch
+        - this
+        - throw
+        - true
+        - try
+        - typeof
+        - uint
+        - ulong
+        - unchecked
+        - unsafe
+        - ushort
+        - using
+        - value
+        - var
+        - virtual
+        - void
+        - volatile
+        - when
+        - where
+        - while
+        - yield
+      - fileName: None
+        fileNameWithoutAssets: None
+        fileNameWithoutAssetsPlusLineNumber: None
+        fileNameWithoutPath: None
+        fileNameWithoutPathPlusLineNumber: None
+        fileNamePretty: None
+        instanceID: -1
+        className: EditorApplication
+        methodName: Internal_CallUpdateFunctions
+        namespaceName: UnityEditor
+        lineNumberString: 0
+        charNumber: 0
+        stackLabel: EditorApplication.Internal_CallUpdateFunctions()
+        stackLabel2: 
+        stackLabel1Content:
+          m_Text: EditorApplication.Internal_CallUpdateFunctions()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 288
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 1
+        sourceCodeHighlightIndex: -1
+        showSource: 1
+        keywordTokens:
+        - abstract
+        - add
+        - alias
+        - as
+        - ascending
+        - async
+        - await
+        - base
+        - bool
+        - break
+        - by
+        - byte
+        - case
+        - catch
+        - char
+        - checked
+        - class
+        - const
+        - continue
+        - decimal
+        - default
+        - delegate
+        - descending
+        - do
+        - double
+        - dynamic
+        - else
+        - enum
+        - equals
+        - event
+        - explicit
+        - extern
+        - false
+        - finally
+        - fixed
+        - float
+        - for
+        - foreach
+        - from
+        - get
+        - global
+        - goto
+        - group
+        - if
+        - implicit
+        - in
+        - int
+        - interface
+        - internal
+        - into
+        - is
+        - join
+        - let
+        - lock
+        - long
+        - nameof
+        - namespace
+        - new
+        - null
+        - object
+        - on
+        - operator
+        - orderby
+        - out
+        - override
+        - params
+        - partial
+        - private
+        - protected
+        - public
+        - readonly
+        - ref
+        - remove
+        - return
+        - sbyte
+        - sealed
+        - select
+        - set
+        - short
+        - sizeof
+        - stackalloc
+        - static
+        - string
+        - struct
+        - switch
+        - this
+        - throw
+        - true
+        - try
+        - typeof
+        - uint
+        - ulong
+        - unchecked
+        - unsafe
+        - ushort
+        - using
+        - value
+        - var
+        - virtual
+        - void
+        - volatile
+        - when
+        - where
+        - while
+        - yield
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 1c64a82a-3a2b-4818-806d-d66b3c0ea679
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 8dee9d0a-4fce-483b-8658-136ce51071d8
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: a116ad91-0983-4e98-bef4-55e8a3006287
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: eef98b92-59cc-450c-81de-6957e386f303
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 1c64a82a-3a2b-4818-806d-d66b3c0ea679
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 8dee9d0a-4fce-483b-8658-136ce51071d8
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: a116ad91-0983-4e98-bef4-55e8a3006287
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: eef98b92-59cc-450c-81de-6957e386f303
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1116,7 +3453,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &22
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1152,8 +3489,8 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 46864
---- !u!114 &23
+  m_LastSelectedObjectID: 48468
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2120,7 +4457,7 @@ MonoBehaviour:
       data:
         m_SortAscending: 0
         m_SortedColumn: -1
---- !u!114 &24
+--- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2182,7 +4519,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 7a650000
     m_LastClickedID: 25978
-    m_ExpandedIDs: 000000001a7400001c7400001e74000020740000227400002474000026740000287400002a7400002c7400002e74000030740000327400003474000036740000387400003a7400003c7400003e74000040740000427400004474000046740000
+    m_ExpandedIDs: 000000001a7400001c7400001e74000020740000227400002474000026740000287400002a7400002c7400002e74000030740000327400003474000036740000387400003a7400003c7400003e740000407400004274000044740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2210,7 +4547,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001a7400001c7400001e74000020740000227400002474000026740000287400002a7400002c7400002e74000030740000327400003474000036740000387400003a7400003c7400003e74000040740000427400004474000046740000
+    m_ExpandedIDs: 000000001a7400001c7400001e74000020740000227400002474000026740000287400002a7400002c7400002e74000030740000327400003474000036740000387400003a7400003c7400003e740000407400004274000044740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2266,7 +4603,7 @@ MonoBehaviour:
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 200
---- !u!114 &25
+--- !u!114 &26
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2301,7 +4638,7 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   mForceToOpen: 0
---- !u!114 &26
+--- !u!114 &27
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2321,10 +4658,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 716
-    y: 583
-    width: 600
-    height: 408
+    x: 948
+    y: 597
+    width: 402
+    height: 394
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2346,7 +4683,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Runtime/Managers
+    - Assets/Aify
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -2354,16 +4691,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Runtime/Managers
+  - Assets/Aify
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\berka\Desktop\ATM_Rush
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 364}
-    m_SelectedIDs: 76750000
-    m_LastClickedID: 30070
-    m_ExpandedIDs: 000000001a7400001c7400001e74000020740000227400002474000026740000287400002a7400002c7400002e74000030740000327400003474000036740000387400003a7400003c7400003e7400004074000042740000447400004674000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 4e750000
+    m_LastClickedID: 30030
+    m_ExpandedIDs: 000000001a7400001c7400001e740000207400002474000026740000287400002a7400002c7400002e74000030740000327400003474000036740000387400003a7400003e7400004074000042740000447400000a750000987500009c750000fca80000a6a9000094aa000098aa000054ab0000ceac000050b200002ab7000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2391,7 +4728,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001a7400001c7400001e74000020740000227400002474000026740000287400002a7400002c7400002e74000030740000327400003474000036740000387400003a7400003c7400003e74000040740000427400004474000046740000
+    m_ExpandedIDs: 000000001a7400001c7400001e74000020740000227400002474000026740000287400002a7400002c7400002e74000030740000327400003474000036740000387400003a7400003c7400003e740000407400004274000044740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2419,7 +4756,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000069d010086d500009483000004f4000090510900feba020020a50700aaa00200e47c1600263d0d000af6010012f7010054a30300ecc2eeff6e5feeff86bb08006ad3000042cf0000ec1df7ffcef4f6ff56d00000b4d000002c1a2600643be2ff2a7b000010a8000018d500004689000016900000000000008cd400008ed40000
+    m_ExpandedInstanceIDs: c6230000069d010086d500009483000004f4000090510900feba020020a50700aaa00200e47c1600263d0d000af6010012f7010054a30300ecc2eeff6e5feeff86bb08006ad3000042cf0000ec1df7ffcef4f6ff56d00000b4d000002c1a2600643be2ff2a7b000010a8000018d500004689000016900000000000008cd400008ed40000728700005eaf0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2446,8 +4783,8 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 201
---- !u!114 &27
+  m_DirectoriesAreaWidth: 52
+--- !u!114 &28
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2467,9 +4804,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1318
+    x: 1352
     y: 73
-    width: 601
+    width: 567
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -2494,7 +4831,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &28
+--- !u!114 &29
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2555,7 +4892,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
---- !u!114 &29
+--- !u!114 &30
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}

@@ -60,6 +60,16 @@ namespace Runtime.Handler
                     button.onClick.AddListener(_manager.OnRestartLevel);
                     break;
                 }
+                case UIEventSubscriptionTypes.OnIncomeUpdate:
+                {
+                    button.onClick.AddListener(_manager.OnIncomeUpdate);
+                    break;
+                }
+                case UIEventSubscriptionTypes.OnStackUpdate:
+                {
+                    button.onClick.AddListener(_manager.OnStackUpdate);
+                    break;
+                }
             }
         }
 

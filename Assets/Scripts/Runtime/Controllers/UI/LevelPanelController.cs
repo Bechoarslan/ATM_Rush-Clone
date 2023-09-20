@@ -11,7 +11,13 @@ namespace Runtime.Controllers.UI
 
         #region Serialized Variables
 
-        [SerializeField] private TextMeshProUGUI levelText;
+        [SerializeField] private TextMeshProUGUI levelText, moneyText;
+
+        #endregion
+
+        #region Serialized Variables
+
+        private int _moneyValue;
 
         #endregion
 
@@ -25,11 +31,26 @@ namespace Runtime.Controllers.UI
         private void SubscribeEvents()
         {
             UISignals.Instance.onSetNewLevelValue += OnSetNewLevelValue;
+            UISignals.Instance.onGetMoneyValue += OnGetMoneyValue;
+            UISignals.Instance.onSetMoneyValue += OnSetMoneyValue;
+        }
+
+        private void OnSetMoneyValue(int moneyValue)
+        {
+            _moneyValue = moneyValue;
+            moneyText.text = moneyValue.ToString();
+        }
+
+        private int OnGetMoneyValue()
+        {
+            return _moneyValue;
         }
 
         private void UnsubscribeEvents()
         {
             UISignals.Instance.onSetNewLevelValue -= OnSetNewLevelValue;
+            UISignals.Instance.onGetMoneyValue -= OnGetMoneyValue;
+            UISignals.Instance.onSetMoneyValue -= OnSetMoneyValue;
         }
 
         private void OnDisable()
@@ -37,7 +58,7 @@ namespace Runtime.Controllers.UI
             UnsubscribeEvents();
         }
 
-        public void OnSetNewLevelValue(int levelValue)
+        public void OnSetNewLevelValue(byte levelValue)
         {
             levelText.text = "LEVEL " + ++levelValue;
         }

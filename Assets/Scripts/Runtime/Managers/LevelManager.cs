@@ -27,7 +27,7 @@ namespace Runtime.Managers
 
         [Header("Holder")] [SerializeField] internal GameObject levelHolder;
 
-        [Space] [SerializeField] private int totalLevelCount;
+        [Space] [SerializeField] private byte totalLevelCount;
 
         #endregion
 
@@ -83,9 +83,9 @@ namespace Runtime.Managers
         }
 
 
-        private int GetLevelID()
+        private byte GetLevelID()
         {
-            return _gameData.Level % totalLevelCount;
+            return (byte)(_gameData.Level % totalLevelCount);
         }
 
 

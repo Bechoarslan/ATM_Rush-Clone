@@ -15,7 +15,7 @@ namespace Runtime.Commands
             _levelManager = levelManager;
         }
 
-        public void Execute(int parameter)
+        public void Execute(byte parameter)
         {
             var resourceRequest = Resources.LoadAsync<GameObject>($"Prefabs/LevelPrefabs/level {parameter}");
             resourceRequest.completed += operation =>
