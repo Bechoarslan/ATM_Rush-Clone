@@ -2,6 +2,9 @@ namespace Runtime.Enums
 {
     public enum CameraStates
     {
-        Idle,
+        Initial,
+        Follow,
+        MiniGame,
+        
     }
 }

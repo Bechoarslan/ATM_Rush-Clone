@@ -20,7 +20,7 @@ namespace Runtime.Signals
         public UnityAction onReset = delegate { };
         public Func<byte> onGetLevelID = delegate { return 0; };
         
-        public UnityAction onConveyor = delegate {  };
+        public UnityAction onMiniGameAreaEntered = delegate {  };
         public UnityAction<GameObject> onAtmTouched = delegate {  };
         public UnityAction onMiniGameStart = delegate {  };
         

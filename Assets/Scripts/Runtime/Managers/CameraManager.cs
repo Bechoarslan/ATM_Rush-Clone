@@ -1,6 +1,8 @@
+using Cinemachine;
 using Runtime.Enums;
 using Runtime.Signals;
 using Signals;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace Runtime.Managers
@@ -12,6 +14,13 @@ namespace Runtime.Managers
         #region Serialized Variables
 
         [SerializeField] private Animator animator;
+        [SerializeField] private CinemachineStateDrivenCamera stateDrivenCamera;
+
+        #endregion
+
+        #region Private Variables
+
+        private float3 _initialPosition; 
 
         #endregion
 
@@ -19,6 +28,16 @@ namespace Runtime.Managers
 
         #region Event Subscriptions
 
+        private void Awake()
+        {
+            Init();
+        }
+
+        private void Init()
+        {
+            _initialPosition = transform.position;
+        }
+        
         private void OnEnable()
         {
             SubscribeEvents();
@@ -28,12 +47,20 @@ namespace Runtime.Managers
         {
             CoreGameSignals.Instance.onReset += OnReset;
             CameraSignals.Instance.onChangeCameraState += OnChangeCameraState;
+            CameraSignals.Instance.onSetCinemachineTarget += OnSetCinemachineTarget;
+        }
+
+        private void OnSetCinemachineTarget()
+        {
+            // var target = FindObjectOfType<PlayerManager>().transform;
+            // stateDrivenCamera.Follow = target;
         }
 
         private void UnsubscribeEvents()
         {
             CoreGameSignals.Instance.onReset -= OnReset;
             CameraSignals.Instance.onChangeCameraState -= OnChangeCameraState;
+            CameraSignals.Instance.onSetCinemachineTarget -= OnSetCinemachineTarget;
         }
 
         private void OnDisable()
@@ -50,7 +77,10 @@ namespace Runtime.Managers
 
         private void OnReset()
         {
-            CameraSignals.Instance.onChangeCameraState?.Invoke(CameraStates.Idle);
+            CameraSignals.Instance.onChangeCameraState?.Invoke(CameraStates.Initial);
+            stateDrivenCamera.Follow = null;
+            stateDrivenCamera.LookAt = null;
+            transform.position = _initialPosition;
         }
     }
 }
