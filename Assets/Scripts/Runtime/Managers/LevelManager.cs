@@ -1,4 +1,5 @@
 ﻿using _Modules.SaveModule.Scripts.Data;
+using _Modules.SaveModule.Scripts.Managers;
 using DG.Tweening;
 using Managers;
 using Runtime.Commands;
@@ -33,8 +34,8 @@ namespace Runtime.Managers
 
         #region Private Variables
 
-        private LevelLoaderCommand _levelLoader;
-        private LevelDestroyerCommand _levelDestroyer;
+        private readonly LevelLoaderCommand _levelLoader;
+        private readonly LevelDestroyerCommand _levelDestroyer;
         private GameData _gameData;
 
         #endregion
@@ -48,7 +49,7 @@ namespace Runtime.Managers
 
         private void AssignSaveData()
         {
-            _gameData = SaveDistributorManager.GetSaveData();
+            _gameData = SaveDistributorManager.GetSaveData();   
         }
 
         private void OnEnable()
@@ -96,17 +97,18 @@ namespace Runtime.Managers
             CoreGameSignals.Instance.onClearActiveLevel?.Invoke();
             DOVirtual.DelayedCall(.1f, () => CoreGameSignals.Instance.onLevelInitialize?.Invoke(GetLevelID()));
             CoreUISignals.Instance.onCloseAllPanels?.Invoke();
-            CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Start, 0);
+            
             
         }
 
         private void OnRestartLevel()
         {
+            SaveDistributorManager.SaveData();
             CoreGameSignals.Instance.onClearActiveLevel?.Invoke();
             DOVirtual.DelayedCall(.1f, () => CoreGameSignals.Instance.onLevelInitialize?.Invoke(GetLevelID()));
             CoreUISignals.Instance.onCloseAllPanels?.Invoke();
-            CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Start, 0);
-            SaveDistributorManager.SaveData();
+            
+            
         }
     }
 }

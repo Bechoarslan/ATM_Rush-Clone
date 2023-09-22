@@ -29,7 +29,6 @@ namespace Runtime.Managers
             CoreGameSignals.Instance.onReset += OnReset;
             CoreGameSignals.Instance.onLevelFailed += OnLevelFailed;
             CoreGameSignals.Instance.onLevelSuccessful += OnLevelSuccessful;
-
             OpenStartPanel();
         }
 
@@ -39,6 +38,7 @@ namespace Runtime.Managers
             CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Start, 0);
             CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Level, 1);
             CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Shop, 2);
+            
         }
 
         private void OnDisable()
@@ -56,6 +56,7 @@ namespace Runtime.Managers
             CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Level, 1);
             CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Shop, 2);
             UISignals.Instance.onSetNewLevelValue?.Invoke(levelValue);
+            
         }
 
         public void OnPlay()
@@ -99,13 +100,13 @@ namespace Runtime.Managers
 
         public void OnIncomeUpdate()
         {
-            CoreGameSignals.Instance.onClickIncome?.Invoke();
+            UISignals.Instance.onClickIncome?.Invoke();
             UISignals.Instance.onSetIncomeLvlText?.Invoke();
         }
 
         public void OnStackUpdate()
         {
-            CoreGameSignals.Instance.onClickStack?.Invoke();
+            UISignals.Instance.onClickStack?.Invoke();
             UISignals.Instance.onSetStackLvlText?.Invoke();
         }
 

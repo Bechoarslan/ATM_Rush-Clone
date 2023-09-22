@@ -4,10 +4,10 @@ namespace _Modules.SaveModule.Scripts.Data
 {
     public class GameData:ISaveableEntity
     {
-        public int Coin; 
+        public int Money; 
         public byte Level;
         public bool Haptic;
-        public int SFX;
+        public bool SFX;
         public string GetKey()
         {
             throw new System.NotImplementedException();

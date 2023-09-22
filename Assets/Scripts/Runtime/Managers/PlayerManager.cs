@@ -63,8 +63,13 @@ namespace Runtime.Managers
             CoreGameSignals.Instance.onPlay += OnPlay;
             CoreGameSignals.Instance.onReset += OnReset;
             CoreGameSignals.Instance.onMiniGameAreaEntered += OnMiniGameAreaEntered;
-            //ScoreSignals.Instance.onSetTotalScore += ()=> PlayerSignals.Instance.onSetTotalScore?.Invoke();
-           
+            PlayerSignals.Instance.onSetTotalScore += OnSetTotalScore;
+
+        }
+
+        private void OnSetTotalScore(int value)
+        {
+            PlayerSignals.Instance.onSetTotalScore?.Invoke(value);
         }
 
         private void OnPlay()
@@ -100,7 +105,7 @@ namespace Runtime.Managers
             CoreGameSignals.Instance.onPlay -= OnPlay;
             CoreGameSignals.Instance.onReset -= OnReset;
             CoreGameSignals.Instance.onMiniGameAreaEntered -= OnMiniGameAreaEntered;
-            //ScoreSignals.Instance.onSetTotalScore -= ()=> PlayerSignals.Instance.onSetTotalScore?.Invoke();
+            PlayerSignals.Instance.onSetTotalScore -= OnSetTotalScore;
         }
 
         private void OnDisable()

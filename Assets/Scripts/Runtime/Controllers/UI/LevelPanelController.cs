@@ -46,6 +46,11 @@ namespace Runtime.Controllers.UI
             return _moneyValue;
         }
 
+        private void OnSetNewLevelValue(byte levelValue)
+        {
+            levelText.text = "LEVEL " + ++levelValue;
+        }
+
         private void UnsubscribeEvents()
         {
             UISignals.Instance.onSetNewLevelValue -= OnSetNewLevelValue;
@@ -58,9 +63,6 @@ namespace Runtime.Controllers.UI
             UnsubscribeEvents();
         }
 
-        public void OnSetNewLevelValue(byte levelValue)
-        {
-            levelText.text = "LEVEL " + ++levelValue;
-        }
+       
     }
 }
