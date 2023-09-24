@@ -8,6 +8,8 @@ namespace _Modules.SaveModule.Scripts.Data
         public byte Level;
         public bool Haptic;
         public bool SFX;
+        public byte IncomeLevel;
+        public byte StackLevel;
         public string GetKey()
         {
             throw new System.NotImplementedException();
