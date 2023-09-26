@@ -125,8 +125,8 @@ namespace Runtime.Managers
 
         private void OnInteractionWithATM(GameObject collectableObject)
         {
-            // ScoreSignals.Instance.onSetAtmScore?.Invoke((int)collectableGameObject.GetComponent<CollectableManager>()
-            //     .CollectableTypeValue + 1);
+             ScoreSignals.Instance.onSetAtmScore?.Invoke(collectableObject.GetComponent<CollectableManager>()
+              .GetCurrentValue() + 1);
 
             if (_lastCheck == false)
             {

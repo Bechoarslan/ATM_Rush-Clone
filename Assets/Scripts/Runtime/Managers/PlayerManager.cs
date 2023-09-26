@@ -116,7 +116,7 @@ namespace Runtime.Managers
         {
             var position = transform.position;
             Vector2 pos = new Vector2(position.x, position.z);
-            //StackSignals.Instance.onStackFollowPlayer?.Invoke(pos);
+            StackSignals.Instance.onStackFollowPlayer?.Invoke(pos);
         }
 
         private IEnumerator WaitForFinal()
