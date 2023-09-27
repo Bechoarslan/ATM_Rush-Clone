@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 685
     width: 591
     height: 254
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 21}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 20
+  controlID: 43
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 89
+  controlID: 168
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 591
     height: 685
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -268,8 +268,8 @@ MonoBehaviour:
     y: 0
     width: 455
     height: 524
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -352,8 +352,8 @@ MonoBehaviour:
     y: 0
     width: 550
     height: 939
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 28}
   m_Panes:
   - {fileID: 28}
@@ -1046,9 +1046,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ceefffff
+      m_SelectedIDs: 10580000
       m_LastClickedID: 0
-      m_ExpandedIDs: 44f8ffff4af8ffff4ef8ffff54f8ffff5af8ffff5cf8ffff5ef8ffff66f8ffff6cf8ffff92faffff
+      m_ExpandedIDs: b4f8ffffbaf8ffffbef8ffffc4f8ffffcaf8ffffccf8ffffcef8ffffd6f8ffffdcf8ffff0afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1130,7 +1130,7 @@ MonoBehaviour:
         Use [SettingsProvider] instead.''
 
 '
-      originalLog: '[17:48:09] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs(33,10):
+      originalLog: '[14:23:21] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs(33,10):
         warning CS0618: ''PreferenceItem'' is obsolete: ''[PreferenceItem] is deprecated.
         Use [SettingsProvider] instead.''
 
@@ -1144,12 +1144,12 @@ MonoBehaviour:
       nativeFileNamePretty: 
       nativeLineNumber: 33
       watchName: 
-      logText: '09] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs(33,10):
+      logText: '21] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs(33,10):
 
         warning
         CS0618''PreferenceItem'' is obsolete''[PreferenceItem] is deprecated. Use
         [SettingsProvider] instead.'''
-      logTruncatedText: '09] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs(33,10):
+      logTruncatedText: '21] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs(33,10):
 
         warning
         CS0618''PreferenceItem'' is obsolete''[PreferenceItem] is deprecated. Use
@@ -1160,7 +1160,7 @@ MonoBehaviour:
       namespaceName: 
       lineCount: 1
       hasSourceCode: 0
-      timeStamp: 17:48:09
+      timeStamp: 14:23:21
       timeFrame: -1
       timeStampDateTimeNow: 
       instanceID: 0
@@ -1168,9 +1168,9 @@ MonoBehaviour:
       cachedHeight: -1
       cachedHeightLogWidth: 0
       stackEntries:
-      - fileName: '[17:48:09] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs'
-        fileNameWithoutAssets: '[17:48:09] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs'
-        fileNameWithoutAssetsPlusLineNumber: '[17:48:09] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs:33'
+      - fileName: '[14:23:21] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs'
+        fileNameWithoutAssets: '[14:23:21] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs'
+        fileNameWithoutAssetsPlusLineNumber: '[14:23:21] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs:33'
         fileNameWithoutPath: ScreenShooterPrefs.cs
         fileNameWithoutPathPlusLineNumber: ScreenShooterPrefs.cs:33
         fileNamePretty: ScreenShooterPrefs
@@ -1181,7 +1181,7 @@ MonoBehaviour:
         lineNumberString: 33
         charNumber: 10
         stackLabel: Compiler Warning
-        stackLabel2: ' at [17:48:09] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs:33
+        stackLabel2: ' at [14:23:21] Assets\ScreenShooter\Editor\Scripts\Prefs\ScreenShooterPrefs.cs:33
           column 10'
         stackLabel1Content:
           m_Text: 
@@ -2782,7 +2782,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Data
+    - Assets/Scripts/Runtime/Managers
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -2790,16 +2790,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Resources/Data
+  - Assets/Scripts/Runtime/Managers
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\berka\Desktop\ATM_Rush
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 250}
-    m_SelectedIDs: 18760000
-    m_LastClickedID: 30232
-    m_ExpandedIDs: 00000000a6740000a8740000aa740000ac740000ae740000b0740000b2740000b4740000b6740000b8740000ba740000bc740000be740000c0740000c2740000c4740000c6740000c8740000ca740000cc740000ce740000d0740000d2740000d4740000d6740000d8740000da740000dc740000de740000e0740000e2740000e4740000e6740000e8740000ea740000ec740000b475000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 570}
+    m_SelectedIDs: 3a760000
+    m_LastClickedID: 30266
+    m_ExpandedIDs: 00000000ac740000ae740000b0740000b2740000b4740000b6740000b8740000ba740000bc740000be740000c0740000c2740000c4740000c6740000c8740000ca740000cc740000ce740000d0740000d2740000d4740000d6740000d8740000da740000dc740000de740000e0740000e2740000e4740000e6740000e8740000ea740000ec740000ee740000f0740000f2740000ba75000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2827,7 +2827,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a6740000a8740000aa740000ac740000ae740000b0740000b2740000b4740000b6740000b8740000ba740000bc740000be740000c0740000c2740000c4740000c6740000c8740000ca740000cc740000ce740000d0740000d2740000d4740000d6740000d8740000da740000dc740000de740000e0740000e2740000e4740000e6740000e8740000ea740000ec740000
+    m_ExpandedIDs: 00000000ac740000ae740000b0740000b2740000b4740000b6740000b8740000ba740000bc740000be740000c0740000c2740000c4740000c6740000c8740000ca740000cc740000ce740000d0740000d2740000d4740000d6740000d8740000da740000dc740000de740000e0740000e2740000e4740000e6740000e8740000ea740000ec740000ee740000f0740000f2740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2980,7 +2980,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 810}
     m_SelectedIDs: 4a760000
     m_LastClickedID: 30282
-    m_ExpandedIDs: 00000000a6740000a8740000aa740000ac740000ae740000b0740000b2740000b4740000b6740000b8740000ba740000bc740000be740000c0740000c2740000c4740000c6740000c8740000ca740000cc740000ce740000d0740000d2740000d4740000d6740000d8740000da740000dc740000de740000e0740000e2740000e4740000e6740000e8740000ea740000ec740000b475000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000ac740000ae740000b0740000b2740000b4740000b6740000b8740000ba740000bc740000be740000c0740000c2740000c4740000c6740000c8740000ca740000cc740000ce740000d0740000d2740000d4740000d6740000d8740000da740000dc740000de740000e0740000e2740000e4740000e6740000e8740000ea740000ec740000ee740000f0740000f2740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3008,7 +3008,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a6740000a8740000aa740000ac740000ae740000b0740000b2740000b4740000b6740000b8740000ba740000bc740000be740000c0740000c2740000c4740000c6740000c8740000ca740000cc740000ce740000d0740000d2740000d4740000d6740000d8740000da740000dc740000de740000e0740000e2740000e4740000e6740000e8740000ea740000ec740000
+    m_ExpandedIDs: 00000000ac740000ae740000b0740000b2740000b4740000b6740000b8740000ba740000bc740000be740000c0740000c2740000c4740000c6740000c8740000ca740000cc740000ce740000d0740000d2740000d4740000d6740000d8740000da740000dc740000de740000e0740000e2740000e4740000e6740000e8740000ea740000ec740000ee740000f0740000f2740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
