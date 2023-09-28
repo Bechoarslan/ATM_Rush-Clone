@@ -1,5 +1,6 @@
 ﻿using System;
 using DG.Tweening;
+using Runtime.Enums;
 using Runtime.Signals;
 using UnityEngine;
 
@@ -56,6 +57,7 @@ namespace Runtime.Controllers.Player
             if (other.CompareTag(_miniGame))
             {
                 CoreGameSignals.Instance.onMiniGameAreaEntered?.Invoke();
+                CameraSignals.Instance.onChangeCameraState?.Invoke(CameraStates.MiniGame);
                 return;
             }
         }

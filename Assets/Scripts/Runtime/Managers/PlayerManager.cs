@@ -69,7 +69,7 @@ namespace Runtime.Managers
 
         private void OnSetTotalScore(int value)
         {
-            PlayerSignals.Instance.onSetTotalScore?.Invoke(value);
+            _playerMeshController.SetTotalScore(value);
         }
 
         private void OnPlay()

@@ -11,35 +11,15 @@ namespace Runtime.Controllers.Player
 
         #region Serialized Variables
 
-        [SerializeField] private TextMeshPro _scoreText;
+        [SerializeField] private TextMeshPro scoreText;
 
         #endregion
 
         #endregion
 
-        private void OnEnable()
+        internal void SetTotalScore(int value)
         {
-            SubscribeEvents();
-        }
-
-        private void SubscribeEvents()
-        {
-            PlayerSignals.Instance.onSetTotalScore += OnSetTotalScore;
-        }
-
-        private void OnSetTotalScore(int value)
-        {
-            _scoreText.text = value.ToString();
-        }
-
-        private void UnSubscribeEvents()
-        {
-            PlayerSignals.Instance.onSetTotalScore -= OnSetTotalScore;
-        }
-
-        private void OnDisable()
-        {
-            UnSubscribeEvents();
+            scoreText.text = value.ToString();
         }
     }
 }
