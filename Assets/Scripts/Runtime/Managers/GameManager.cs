@@ -1,12 +1,6 @@
-﻿//using Tabtale.TTPlugins;
-
-using _Modules.SaveModule.Scripts.Data;
-
-using Managers;
-using Runtime.Enums;
+﻿using Runtime.Enums;
 using Runtime.Extentions;
 using Runtime.Signals;
-using Signals;
 using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
@@ -18,33 +12,22 @@ public class GameManager : MonoSingleton<GameManager>
     public GameStates States;
 
     #endregion
-    
+
     #endregion
 
     protected override void Awake()
     {
         Application.targetFrameRate = 60;
-        //TTPCore.Setup();
     }
 
     private void OnEnable()
     {
-        SubscribeEvent();
+        SubscribeEvents();
     }
 
-    private void SubscribeEvent()
+    private void SubscribeEvents()
     {
         CoreGameSignals.Instance.onChangeGameStates += OnChangeGameState;
-    }
-
-    private void OnDisable()
-    {
-        UnSubscribeEvent();
-    }
-
-    private void UnSubscribeEvent()
-    {
-        CoreGameSignals.Instance.onChangeGameStates -= OnChangeGameState;
     }
 
     private void OnChangeGameState(GameStates newState)
@@ -52,5 +35,13 @@ public class GameManager : MonoSingleton<GameManager>
         States = newState;
     }
 
-   
+    private void UnSubscribeEvents()
+    {
+        CoreGameSignals.Instance.onChangeGameStates -= OnChangeGameState;
+    }
+
+    private void OnDisable()
+    {
+        UnSubscribeEvents();
+    }
 }

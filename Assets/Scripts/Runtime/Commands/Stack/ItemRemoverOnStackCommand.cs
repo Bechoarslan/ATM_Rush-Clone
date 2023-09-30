@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Runtime.Managers;
 using UnityEngine;
 
@@ -9,6 +9,7 @@ namespace Runtime.Commands.Stack
         private StackManager _stackManager;
         private List<GameObject> _collectableStack;
         private Transform _levelHolder;
+
         public ItemRemoverOnStackCommand(StackManager stackManager, ref List<GameObject> collectableStack)
         {
             _stackManager = stackManager;
@@ -16,15 +17,15 @@ namespace Runtime.Commands.Stack
             _levelHolder = GameObject.Find("LevelHolder").transform;
         }
 
-        public void Execute(GameObject collectableObject)
+        public void Execute(GameObject collectableGameObject)
         {
-            int index = _collectableStack.IndexOf(collectableObject);
+            int index = _collectableStack.IndexOf(collectableGameObject);
             int last = _collectableStack.Count - 1;
-            _collectableStack.Clear();
+            collectableGameObject.transform.SetParent(_levelHolder.transform.GetChild(0));
+            collectableGameObject.SetActive(false);
+            _stackManager.StackJumperCommand.Execute(last, index);
+            _collectableStack.RemoveAt(index);
             _collectableStack.TrimExcess();
-            collectableObject.transform.SetParent(_levelHolder);
-            collectableObject.SetActive(false);
-            _stackManager.StackJumperCommand.Execute(last,index);
             _stackManager.StackTypeUpdaterCommand.Execute();
         }
     }

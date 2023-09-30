@@ -1,4 +1,4 @@
-﻿using Runtime.Managers;
+using Runtime.Managers;
 using Runtime.Signals;
 using UnityEngine;
 
@@ -8,7 +8,9 @@ namespace Runtime.Commands.Stack
     {
         private StackManager _stackManager;
         private GameObject _money;
-        public StackInitializerCommand(StackManager stackManager, ref GameObject money)
+
+        public StackInitializerCommand(StackManager stackManager,
+            ref GameObject money)
         {
             _stackManager = stackManager;
             _money = money;
@@ -16,7 +18,8 @@ namespace Runtime.Commands.Stack
 
         public void Execute()
         {
-            for (int i = 1; i < CoreGameSignals.Instance.onGetStackLevel(); i++)
+            var stackLevel = CoreGameSignals.Instance.onGetStackLevel();
+            for (int i = 1; i < stackLevel; i++)
             {
                 GameObject obj = Object.Instantiate(_money);
                 _stackManager.AdderOnStackCommand.Execute(obj);

@@ -1,9 +1,11 @@
-﻿using System.Collections;
+using System;
+using System.Collections;
 using DG.Tweening;
 using Runtime.Controllers.MiniGame;
 using Runtime.Signals;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Runtime.Managers
 {
@@ -33,8 +35,8 @@ namespace Runtime.Managers
         #endregion
 
         #endregion
-        
-         private void OnEnable()
+
+        private void OnEnable()
         {
             SubscribeEvents();
         }

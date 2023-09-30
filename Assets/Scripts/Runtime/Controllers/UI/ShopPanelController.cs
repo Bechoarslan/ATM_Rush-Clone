@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Runtime.Signals;
 using TMPro;
 using UnityEngine;
@@ -25,23 +25,23 @@ namespace Runtime.Controllers.UI
 
         private void OnEnable()
         {
-            SubscribeEvent();
+            SubscribeEvents();
         }
 
-        private void SubscribeEvent()
+        private void SubscribeEvents()
         {
-            UISignals.Instance.onSetIncomeLvlText += OnSetIncomeLvlText;
-            UISignals.Instance.onSetStackLvlText += OnSetStackLvlText;
+            UISignals.Instance.onSetIncomeLvlText += OnSetIncomeLvLText;
+            UISignals.Instance.onSetStackLvlText += OnSetStackLvLText;
         }
 
-        private void OnSetStackLvlText()
+        private void OnSetStackLvLText()
         {
-            stackLvlText.text ="Stack lvl\n" + CoreGameSignals.Instance.onGetStackLevel(); 
+            stackLvlText.text = "Stack lvl\n" + CoreGameSignals.Instance.onGetStackLevel();
             stackValue.text = (Mathf.Pow(2, Mathf.Clamp(CoreGameSignals.Instance.onGetStackLevel(), 0, 10)) * 100)
                 .ToString();
         }
 
-        private void OnSetIncomeLvlText()
+        private void OnSetIncomeLvLText()
         {
             incomeLvlText.text = "Income lvl\n" + CoreGameSignals.Instance.onGetIncomeLevel();
             incomeValue.text = (Mathf.Pow(2, Mathf.Clamp(CoreGameSignals.Instance.onGetIncomeLevel(), 0, 10)) * 100)
@@ -50,40 +50,26 @@ namespace Runtime.Controllers.UI
 
         private void UnSubscribeEvents()
         {
-            UISignals.Instance.onSetIncomeLvlText -= OnSetIncomeLvlText;
-            UISignals.Instance.onSetStackLvlText -= OnSetStackLvlText;
+            UISignals.Instance.onSetIncomeLvlText -= OnSetIncomeLvLText;
+            UISignals.Instance.onSetStackLvlText -= OnSetStackLvLText;
         }
 
         private void OnDisable()
         {
             UnSubscribeEvents();
-            
         }
 
         private void Start()
         {
-            SyncsShopUI();
+            SyncShopUi();
         }
 
-        private void SyncsShopUI()
+        private void SyncShopUi()
         {
-            OnSetIncomeLvlText();
-            OnSetStackLvlText();
+            OnSetIncomeLvLText();
+            OnSetStackLvLText();
             ChangesIncomeInteractable();
             ChangesStackInteractable();
-        }
-
-        private void ChangesStackInteractable()
-        {
-            if (int.Parse(UISignals.Instance.onGetMoneyValue?.Invoke().ToString()!) < int.Parse(stackValue.text) ||
-                CoreGameSignals.Instance.onGetStackLevel() >= 15)
-            {
-                stackLvlButton.interactable = false;
-            }
-            else
-            {
-                stackLvlButton.interactable = true;
-            }
         }
 
         private void ChangesIncomeInteractable()
@@ -97,6 +83,19 @@ namespace Runtime.Controllers.UI
             else
             {
                 incomeLvlButton.interactable = true;
+            }
+        }
+
+        private void ChangesStackInteractable()
+        {
+            if (int.Parse(UISignals.Instance.onGetMoneyValue?.Invoke().ToString()!) < int.Parse(stackValue.text) ||
+                CoreGameSignals.Instance.onGetStackLevel() >= 15)
+            {
+                stackLvlButton.interactable = false;
+            }
+            else
+            {
+                stackLvlButton.interactable = true;
             }
         }
     }

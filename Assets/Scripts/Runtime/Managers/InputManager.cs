@@ -1,9 +1,9 @@
+using System;
 using System.Collections.Generic;
 using Runtime.Data.UnityObject;
 using Runtime.Data.ValueObject;
 using Runtime.Keys;
 using Runtime.Signals;
-using Signals;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,37 +12,21 @@ namespace Runtime.Managers
 {
     public class InputManager : MonoBehaviour
     {
-        
-
         #region Self Variables
-
-        #region Public Variables
-
-       
-        
-
-        #endregion
-
-        #region Serialized Variables
-
-        
-
-        #endregion
 
         #region Private Variables
 
         private float _positionValuesX;
 
         private bool _isTouching;
-        [ShowInInspector] private bool _isAvailableForTouch;
-        [ShowInInspector] private bool _isFirstTimeTouchTaken;
-        [Header("Data")] public InputData _data;
 
         private float _currentVelocity; //ref type
         private Vector2? _mousePosition; //ref type
         private Vector3 _moveVector; //ref type
-        
-        private readonly string _dataPath = "Data/CD_Input";
+
+        [Header("Data")] private InputData _data;
+        [ShowInInspector] private bool _isFirstTimeTouchTaken;
+        [ShowInInspector] private bool _isAvailableForTouch;
 
         #endregion
 
@@ -53,15 +37,20 @@ namespace Runtime.Managers
             _data = GetInputData();
         }
 
-        private InputData GetInputData()
-        {
-            return Resources.Load<CD_Input>(_dataPath).Data;
-        }
+        private InputData GetInputData() => Resources.Load<CD_Input>("Data/CD_Input").Data;
 
         private void OnEnable()
         {
             SubscribeEvents();
         }
+
+        private void SubscribeEvents()
+        {
+            CoreGameSignals.Instance.onReset += OnReset;
+            CoreGameSignals.Instance.onPlay += OnPlay;
+            InputSignals.Instance.onChangeInputState += OnChangeInputState;
+        }
+
         private void OnPlay()
         {
             _isAvailableForTouch = true;
@@ -71,13 +60,6 @@ namespace Runtime.Managers
         private void OnChangeInputState(bool state)
         {
             _isAvailableForTouch = state;
-        }
-
-        private void SubscribeEvents()
-        {
-            CoreGameSignals.Instance.onReset += OnReset;
-            CoreGameSignals.Instance.onPlay += OnPlay;
-            InputSignals.Instance.onChangeInputState += OnChangeInputState;
         }
 
         private void UnSubscribeEvents()
@@ -102,7 +84,6 @@ namespace Runtime.Managers
                 _isTouching = false;
 
                 InputSignals.Instance.onInputReleased?.Invoke();
-                InputSignals.Instance.onChangeInputState?.Invoke(false);
             }
 
             if (Input.GetMouseButtonDown(0) && !IsPointerOverUIElement())
@@ -124,7 +105,7 @@ namespace Runtime.Managers
                 {
                     if (_mousePosition != null)
                     {
-                        Vector2 mouseDeltaPos = (Vector2) Input.mousePosition - _mousePosition.Value;
+                        Vector2 mouseDeltaPos = (Vector2)Input.mousePosition - _mousePosition.Value;
 
 
                         if (mouseDeltaPos.x > _data.HorizontalInputSpeed)
@@ -140,15 +121,13 @@ namespace Runtime.Managers
                         InputSignals.Instance.onInputDragged?.Invoke(new HorizontalnputParams()
                         {
                             HorizontalInputValue = _moveVector.x,
-                            HorizontalInputClampSides =  _data.HorizontalInputClampNegativeSides,
-                            
+                            HorizontalInputClampSides = _data.HorizontalInputClampNegativeSides,
                         });
                     }
                 }
             }
         }
 
-       
 
         private bool IsPointerOverUIElement()
         {

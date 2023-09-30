@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,9 +8,8 @@ namespace Runtime.Data.ValueObject
     public struct CollectableData
     {
         public CollectableMeshData MeshData;
-
     }
-    
+
     [Serializable]
     public struct CollectableMeshData
     {

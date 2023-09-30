@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Runtime.Data.ValueObject;
+using Runtime.Managers;
 using UnityEngine;
 
 namespace Runtime.Commands.Stack
@@ -7,16 +8,17 @@ namespace Runtime.Commands.Stack
     public class StackMoverCommand
     {
         private StackData _data;
-        public StackMoverCommand(ref StackData data)
+
+        public StackMoverCommand(ref StackData stackData)
         {
-            _data = data;
+            _data = stackData;
         }
 
         public void Execute(float directionX, List<GameObject> collectableStack)
         {
             float direct = Mathf.Lerp(collectableStack[0].transform.localPosition.x, directionX,
                 _data.LerpSpeed);
-            collectableStack[0].transform.localPosition = new Vector3(direct, 0, 0);
+            collectableStack[0].transform.localPosition = new Vector3(direct, 1f, 0.335f);
             StackItemsLerpMove(collectableStack);
         }
 

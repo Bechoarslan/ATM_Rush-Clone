@@ -5,7 +5,7 @@ namespace Runtime.Enums
         OnPlay,
         OnNextLevel,
         OnRestartLevel,
-        OnIncomeUpdate,
-        OnStackUpdate,
+        OnIncreaseIncome,
+        OnIncreaseStack
     }
 }

@@ -1,4 +1,4 @@
-﻿using Runtime.Data.ValueObject;
+using Runtime.Data.ValueObject;
 using UnityEngine;
 
 namespace Runtime.Data.UnityObject

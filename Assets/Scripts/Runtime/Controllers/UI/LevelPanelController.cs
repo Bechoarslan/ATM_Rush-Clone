@@ -1,7 +1,7 @@
 using Runtime.Signals;
-
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 namespace Runtime.Controllers.UI
 {
@@ -15,7 +15,7 @@ namespace Runtime.Controllers.UI
 
         #endregion
 
-        #region Serialized Variables
+        #region Private Variables
 
         private int _moneyValue;
 
@@ -31,14 +31,8 @@ namespace Runtime.Controllers.UI
         private void SubscribeEvents()
         {
             UISignals.Instance.onSetNewLevelValue += OnSetNewLevelValue;
-            UISignals.Instance.onGetMoneyValue += OnGetMoneyValue;
             UISignals.Instance.onSetMoneyValue += OnSetMoneyValue;
-        }
-
-        private void OnSetMoneyValue(int moneyValue)
-        {
-            _moneyValue = moneyValue;
-            moneyText.text = moneyValue.ToString();
+            UISignals.Instance.onGetMoneyValue += OnGetMoneyValue;
         }
 
         private int OnGetMoneyValue()
@@ -49,20 +43,25 @@ namespace Runtime.Controllers.UI
         private void OnSetNewLevelValue(byte levelValue)
         {
             levelText.text = "LEVEL " + ++levelValue;
+            
+        }
+
+        private void OnSetMoneyValue(int moneyValue)
+        {
+            _moneyValue = moneyValue;
+            moneyText.text = moneyValue.ToString();
         }
 
         private void UnsubscribeEvents()
         {
             UISignals.Instance.onSetNewLevelValue -= OnSetNewLevelValue;
-            UISignals.Instance.onGetMoneyValue -= OnGetMoneyValue;
             UISignals.Instance.onSetMoneyValue -= OnSetMoneyValue;
+            UISignals.Instance.onGetMoneyValue -= OnGetMoneyValue;
         }
 
         private void OnDisable()
         {
             UnsubscribeEvents();
         }
-
-       
     }
 }

@@ -1,4 +1,3 @@
-﻿using System;
 using Runtime.Enums;
 using Runtime.Signals;
 using UnityEngine;
@@ -24,18 +23,17 @@ namespace Runtime.Controllers.Player
 
         private void SubscribeEvents()
         {
-            PlayerSignals.Instance.onChangePlayerAnimationState += OnChangePlayerAnimationState;
+            PlayerSignals.Instance.onChangePlayerAnimationState += OnChangeAnimationState;
         }
 
-        private void OnChangePlayerAnimationState(PlayerAnimationStates animationStates)
+        private void OnChangeAnimationState(PlayerAnimationStates animationState)
         {
-            animator.SetTrigger(animationStates.ToString());
+            animator.SetTrigger(animationState.ToString());
         }
 
         private void UnSubscribeEvents()
         {
-            
-            PlayerSignals.Instance.onChangePlayerAnimationState -= OnChangePlayerAnimationState;
+            PlayerSignals.Instance.onChangePlayerAnimationState -= OnChangeAnimationState;
         }
 
         private void OnDisable()
@@ -43,7 +41,7 @@ namespace Runtime.Controllers.Player
             UnSubscribeEvents();
         }
 
-        public void OnReset()
+        internal void OnReset()
         {
             PlayerSignals.Instance.onChangePlayerAnimationState?.Invoke(PlayerAnimationStates.Idle);
         }

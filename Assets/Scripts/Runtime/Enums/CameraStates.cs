@@ -5,6 +5,5 @@ namespace Runtime.Enums
         Initial,
         Follow,
         MiniGame,
-        
     }
 }

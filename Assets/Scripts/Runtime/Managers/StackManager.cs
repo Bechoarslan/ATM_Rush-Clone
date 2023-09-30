@@ -1,13 +1,10 @@
-﻿using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using Runtime.Commands.Stack;
 using Runtime.Data.UnityObject;
 using Runtime.Data.ValueObject;
 using Runtime.Signals;
-using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Runtime.Managers
 {
@@ -17,15 +14,13 @@ namespace Runtime.Managers
 
         #region Public Variables
 
-        public StackJumperCommand StackJumperCommand => _stackJumperCommand;
-        public StackTypeUpdaterCommand StackTypeUpdaterCommand => _stackTypeUpdaterCommand;
-        public ItemAdderOnStackCommand AdderOnStackCommand => _itemAdderOnStackCommand;
+        public StackJumperCommand StackJumperCommand { get; private set; }
 
-        public bool LastCheck
-        {
-            get => _lastCheck;
-            set => _lastCheck = value;
-        }
+        public StackTypeUpdaterCommand StackTypeUpdaterCommand { get; private set; }
+
+        public ItemAdderOnStackCommand AdderOnStackCommand { get; private set; }
+
+        public bool LastCheck { get; set; }
 
         #endregion
 
@@ -37,16 +32,12 @@ namespace Runtime.Managers
 
         #region Private Variables
 
-        [ShowInInspector] private StackData _data;
+        private StackData _data;
         private List<GameObject> _collectableStack = new List<GameObject>();
-        private bool _lastCheck;
 
         private StackMoverCommand _stackMoverCommand;
-        private ItemAdderOnStackCommand _itemAdderOnStackCommand;
         private ItemRemoverOnStackCommand _itemRemoverOnStackCommand;
         private StackAnimatorCommand _stackAnimatorCommand;
-        private StackJumperCommand _stackJumperCommand;
-        private StackTypeUpdaterCommand _stackTypeUpdaterCommand;
         private StackInteractionWithConveyorCommand _stackInteractionWithConveyorCommand;
         private StackInitializerCommand _stackInitializerCommand;
 
@@ -56,27 +47,28 @@ namespace Runtime.Managers
 
         #endregion
 
-
         private void Awake()
         {
             _data = GetStackData();
             Init();
         }
 
-        
-
         private void Init()
         {
             _stackMoverCommand = new StackMoverCommand(ref _data);
-            _itemAdderOnStackCommand = new ItemAdderOnStackCommand(this, ref _collectableStack, ref _data);
+            AdderOnStackCommand = new ItemAdderOnStackCommand(this, ref _collectableStack, ref _data);
             _itemRemoverOnStackCommand = new ItemRemoverOnStackCommand(this, ref _collectableStack);
             _stackAnimatorCommand = new StackAnimatorCommand(this, _data, ref _collectableStack);
-            _stackJumperCommand = new StackJumperCommand(_data, ref _collectableStack);
+            StackJumperCommand = new StackJumperCommand(_data, ref _collectableStack);
             _stackInteractionWithConveyorCommand = new StackInteractionWithConveyorCommand(this, ref _collectableStack);
-            _stackTypeUpdaterCommand = new StackTypeUpdaterCommand(ref _collectableStack);
+            StackTypeUpdaterCommand = new StackTypeUpdaterCommand(ref _collectableStack);
             _stackInitializerCommand = new StackInitializerCommand(this, ref money);
         }
-        private StackData GetStackData() => Resources.Load<CD_Stack>(_stackDataPath).Data;
+
+        private StackData GetStackData()
+        {
+            return Resources.Load<CD_Stack>(_stackDataPath).Data;
+        }
 
         private void OnEnable()
         {
@@ -85,24 +77,15 @@ namespace Runtime.Managers
 
         private void SubscribeEvents()
         {
-           
-            StackSignals.Instance.onInteractionATM += OnInteractionWithATM;
-            StackSignals.Instance.onInteractionObstacle += _itemRemoverOnStackCommand.Execute;
             StackSignals.Instance.onInteractionCollectable += OnInteractionWithCollectable;
+            StackSignals.Instance.onInteractionObstacle += _itemRemoverOnStackCommand.Execute;
+            StackSignals.Instance.onInteractionATM += OnInteractionWithATM;
             StackSignals.Instance.onInteractionConveyor +=
                 _stackInteractionWithConveyorCommand.Execute;
             StackSignals.Instance.onStackFollowPlayer += OnStackMove;
-            StackSignals.Instance.onUpdateType += _stackTypeUpdaterCommand.Execute;
+            StackSignals.Instance.onUpdateType += StackTypeUpdaterCommand.Execute;
             CoreGameSignals.Instance.onPlay += OnPlay;
             CoreGameSignals.Instance.onReset += OnReset;
-            
-        }
-
-       
-        private void OnPlay()
-        {
-            
-            _stackInitializerCommand.Execute();
         }
 
         private void OnStackMove(Vector2 direction)
@@ -114,40 +97,43 @@ namespace Runtime.Managers
             }
         }
 
-
-        private void OnInteractionWithCollectable(GameObject collectableObject)
+        private void OnInteractionWithATM(GameObject collectableGameObject)
         {
-            DOTween.Complete(_stackJumperCommand);
-            _itemAdderOnStackCommand.Execute(collectableObject);
-            StartCoroutine(_stackAnimatorCommand.Execute());
-            _stackTypeUpdaterCommand.Execute();
-        }
-
-        private void OnInteractionWithATM(GameObject collectableObject)
-        {
-             ScoreSignals.Instance.onSetAtmScore?.Invoke(collectableObject.GetComponent<CollectableManager>()
-              .GetCurrentValue() + 1);
-
-            if (_lastCheck == false)
+            ScoreSignals.Instance.onSetAtmScore?.Invoke((int)collectableGameObject.GetComponent<CollectableManager>()
+                .GetCurrentValue() + 1);
+            if (LastCheck == false)
             {
-                _itemRemoverOnStackCommand.Execute(collectableObject);
+                _itemRemoverOnStackCommand.Execute(collectableGameObject);
             }
             else
             {
-                collectableObject.SetActive(false);
+                collectableGameObject.SetActive(false);
             }
-            
         }
-        
+
+        private void OnInteractionWithCollectable(GameObject collectableGameObject)
+        {
+            DOTween.Complete(StackJumperCommand);
+            AdderOnStackCommand.Execute(collectableGameObject);
+            StartCoroutine(_stackAnimatorCommand.Execute());
+            StackTypeUpdaterCommand.Execute();
+        }
+
+        private void OnPlay()
+        {
+            _stackInitializerCommand.Execute();
+        }
+
+
         private void UnSubscribeEvents()
         {
-            StackSignals.Instance.onInteractionATM -= OnInteractionWithATM;
-            StackSignals.Instance.onInteractionObstacle -= _itemRemoverOnStackCommand.Execute;
             StackSignals.Instance.onInteractionCollectable -= OnInteractionWithCollectable;
+            StackSignals.Instance.onInteractionObstacle -= _itemRemoverOnStackCommand.Execute;
+            StackSignals.Instance.onInteractionATM -= OnInteractionWithATM;
             StackSignals.Instance.onInteractionConveyor -=
                 _stackInteractionWithConveyorCommand.Execute;
             StackSignals.Instance.onStackFollowPlayer -= OnStackMove;
-            StackSignals.Instance.onUpdateType -= _stackTypeUpdaterCommand.Execute;
+            StackSignals.Instance.onUpdateType -= StackTypeUpdaterCommand.Execute;
             CoreGameSignals.Instance.onPlay -= OnPlay;
             CoreGameSignals.Instance.onReset -= OnReset;
         }
@@ -156,13 +142,12 @@ namespace Runtime.Managers
         {
             UnSubscribeEvents();
         }
-        
+
         private void OnReset()
         {
-            _lastCheck = false;
+            LastCheck = false;
             _collectableStack.Clear();
             _collectableStack.TrimExcess();
         }
-
     }
 }

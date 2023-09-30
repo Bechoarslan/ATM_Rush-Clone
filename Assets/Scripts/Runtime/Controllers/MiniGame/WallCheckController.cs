@@ -1,4 +1,4 @@
-﻿using DG.Tweening;
+using DG.Tweening;
 using Runtime.Managers;
 using UnityEngine;
 

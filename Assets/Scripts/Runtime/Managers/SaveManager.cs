@@ -1,4 +1,4 @@
-﻿using Runtime.Keys;
+using Runtime.Keys;
 using Runtime.Signals;
 using UnityEngine;
 
@@ -32,7 +32,7 @@ namespace Runtime.Managers
 
         private void SaveData()
         {
-            Debug.LogWarning(ScoreSignals.Instance.onGetMoney());
+            
             OnSaveGame(
                 new SaveGameDataParams()
                 {

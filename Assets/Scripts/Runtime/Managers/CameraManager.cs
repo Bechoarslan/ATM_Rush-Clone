@@ -1,7 +1,9 @@
+using System;
 using Cinemachine;
+using Runtime.Controllers.MiniGame;
 using Runtime.Enums;
 using Runtime.Signals;
-using Signals;
+using Sirenix.OdinInspector;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -13,14 +15,14 @@ namespace Runtime.Managers
 
         #region Serialized Variables
 
-        [SerializeField] private Animator animator;
         [SerializeField] private CinemachineStateDrivenCamera stateDrivenCamera;
+        [SerializeField] private Animator animator;
 
         #endregion
 
         #region Private Variables
 
-        private float3 _initialPosition; 
+        [ShowInInspector] private float3 _initialPosition;
 
         #endregion
 
@@ -37,7 +39,7 @@ namespace Runtime.Managers
         {
             _initialPosition = transform.position;
         }
-        
+
         private void OnEnable()
         {
             SubscribeEvents();
@@ -46,21 +48,42 @@ namespace Runtime.Managers
         private void SubscribeEvents()
         {
             CoreGameSignals.Instance.onReset += OnReset;
-            CameraSignals.Instance.onChangeCameraState += OnChangeCameraState;
             CameraSignals.Instance.onSetCinemachineTarget += OnSetCinemachineTarget;
+            CameraSignals.Instance.onChangeCameraState += OnChangeCameraState;
         }
 
-        private void OnSetCinemachineTarget()
+        private void OnSetCinemachineTarget(CameraTargetState state)
         {
-             var target = FindObjectOfType<PlayerManager>().transform;
-             stateDrivenCamera.Follow = target;
+            switch (state)
+            {
+                case CameraTargetState.Player:
+                {
+                    var playerManager = FindObjectOfType<PlayerManager>().transform;
+                    stateDrivenCamera.Follow = playerManager;
+                }
+                    break;
+                case CameraTargetState.FakePlayer:
+                {
+                    stateDrivenCamera.Follow = null;
+                    var fakePlayer = FindObjectOfType<WallCheckController>().transform.parent.transform;
+                    stateDrivenCamera.Follow = fakePlayer;
+                }
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(state), state, null);
+            }
+        }
+
+        private void OnChangeCameraState(CameraStates state)
+        {
+            animator.SetTrigger(state.ToString());
         }
 
         private void UnsubscribeEvents()
         {
             CoreGameSignals.Instance.onReset -= OnReset;
-            CameraSignals.Instance.onChangeCameraState -= OnChangeCameraState;
             CameraSignals.Instance.onSetCinemachineTarget -= OnSetCinemachineTarget;
+            CameraSignals.Instance.onChangeCameraState -= OnChangeCameraState;
         }
 
         private void OnDisable()
@@ -70,10 +93,6 @@ namespace Runtime.Managers
 
         #endregion
 
-        private void OnChangeCameraState(CameraStates state)
-        {
-            animator.SetTrigger(state.ToString());
-        }
 
         private void OnReset()
         {

@@ -1,4 +1,5 @@
-﻿using Runtime.Controllers.Collectable;
+using System;
+using Runtime.Controllers.Collectables;
 using Runtime.Data.UnityObject;
 using Runtime.Data.ValueObject;
 using Runtime.Signals;
@@ -28,7 +29,7 @@ namespace Runtime.Managers
         #endregion
 
         #endregion
-        
+
         private void Awake()
         {
             _data = GetCollectableData();
@@ -41,12 +42,13 @@ namespace Runtime.Managers
         {
             meshController.SetMeshData(_data.MeshData);
         }
-        
+
+      
         internal void CollectableUpgrade(int value)
         {
             if (_currentValue < 2) _currentValue++;
             meshController.UpgradeCollectableVisual(_currentValue);
-            StackSignals.Instance.onUpdateType?.Invoke();   
+            StackSignals.Instance.onUpdateType?.Invoke();
         }
 
         public byte GetCurrentValue()
@@ -73,7 +75,5 @@ namespace Runtime.Managers
         {
             StackSignals.Instance.onInteractionConveyor?.Invoke();
         }
-
-        
     }
 }

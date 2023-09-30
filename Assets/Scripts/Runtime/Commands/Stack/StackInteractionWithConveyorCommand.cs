@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using DG.Tweening;
 using Runtime.Managers;
 using UnityEngine;
@@ -10,6 +10,7 @@ namespace Runtime.Commands.Stack
         private StackManager _stackManager;
         private List<GameObject> _collectableStack;
         private Transform _levelHolder;
+
         public StackInteractionWithConveyorCommand(StackManager stackManager, ref List<GameObject> collectableStack)
         {
             _stackManager = stackManager;
@@ -19,6 +20,7 @@ namespace Runtime.Commands.Stack
 
         public void Execute()
         {
+            _stackManager.LastCheck = true;
             int i = _collectableStack.Count - 1;
             _collectableStack[i].transform.SetParent(_levelHolder.transform.GetChild(0));
             _collectableStack[i].transform.DOScale(Vector3.zero, 2.5f);

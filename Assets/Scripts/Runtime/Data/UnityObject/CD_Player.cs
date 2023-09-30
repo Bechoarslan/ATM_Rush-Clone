@@ -1,4 +1,4 @@
-﻿using Runtime.Data.ValueObject;
+using Runtime.Data.ValueObject;
 using UnityEngine;
 
 namespace Runtime.Data.UnityObject
@@ -7,6 +7,5 @@ namespace Runtime.Data.UnityObject
     public class CD_Player : ScriptableObject
     {
         public PlayerData Data;
-
     }
 }

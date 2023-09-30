@@ -8,6 +8,6 @@ namespace Runtime.Data.ValueObject
     {
         public float HorizontalInputSpeed;
         public float2 HorizontalInputClampNegativeSides;
-        public float HorizontalInputClampStopValue ;
+        public float HorizontalInputClampStopValue;
     }
 }

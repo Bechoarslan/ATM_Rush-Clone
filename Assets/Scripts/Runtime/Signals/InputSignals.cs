@@ -1,4 +1,3 @@
-
 using Runtime.Extentions;
 using Runtime.Keys;
 using UnityEngine.Events;
@@ -11,6 +10,6 @@ namespace Runtime.Signals
         public UnityAction onInputTaken = delegate { };
         public UnityAction<HorizontalnputParams> onInputDragged = delegate { };
         public UnityAction onInputReleased = delegate { };
-        public UnityAction<bool> onChangeInputState = delegate {  };
+        public UnityAction<bool> onChangeInputState = delegate { };
     }
 }

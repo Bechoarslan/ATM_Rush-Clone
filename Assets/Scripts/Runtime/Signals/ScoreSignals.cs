@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using Runtime.Extentions;
 using UnityEngine.Events;
-using UnityEngine.SocialPlatforms.Impl;
 
 namespace Runtime.Signals
 {
@@ -14,6 +13,5 @@ namespace Runtime.Signals
         public Func<int> onGetMoney = delegate { return 0; };
 
         public Func<float> onGetMultiplier = delegate { return 0; };
-        
     }
 }

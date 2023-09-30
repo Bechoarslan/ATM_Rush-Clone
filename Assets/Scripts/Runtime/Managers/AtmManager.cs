@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using DG.Tweening;
 using Runtime.Signals;
 using TMPro;
@@ -12,8 +12,8 @@ namespace Runtime.Managers
 
         #region Serialized Variables
 
-        [SerializeField] private DOTweenAnimation _doTweenAnimation;
-        [SerializeField] private TextMeshPro _atmText;
+        [SerializeField] private DOTweenAnimation doTweenAnimation;
+        [SerializeField] private TextMeshPro atmText;
 
         #endregion
 
@@ -21,14 +21,13 @@ namespace Runtime.Managers
 
         private void Awake()
         {
-            GetReference();
+            GetReferences();
         }
 
-        private void GetReference()
+        private void GetReferences()
         {
-            _doTweenAnimation = GetComponentInChildren<DOTweenAnimation>();
+            doTweenAnimation = GetComponentInChildren<DOTweenAnimation>();
         }
-
 
         private void OnEnable()
         {
@@ -37,32 +36,33 @@ namespace Runtime.Managers
 
         private void SubscribeEvents()
         {
-            AtmSignals.Instance.onSetAtmScoreText += OnSetAtmScoreText;
             CoreGameSignals.Instance.onAtmTouched += OnAtmTouched;
+            AtmSignals.Instance.onSetAtmScoreText += OnSetAtmScoreText;
         }
 
-        private void OnAtmTouched(GameObject touchedAtmObject)
+
+        private void OnAtmTouched(GameObject touchedATMObject)
         {
-            if (touchedAtmObject.GetInstanceID() == gameObject.GetInstanceID())
+            if (touchedATMObject.GetInstanceID() == gameObject.GetInstanceID())
             {
-                _doTweenAnimation.DOPlay();
+                doTweenAnimation.DOPlay();
             }
         }
 
         private void OnSetAtmScoreText(int value)
         {
-            _atmText.text = value.ToString();
+            atmText.text = value.ToString();
+        }
+
+        private void UnSubscribeEvents()
+        {
+            CoreGameSignals.Instance.onAtmTouched -= OnAtmTouched;
+            AtmSignals.Instance.onSetAtmScoreText -= OnSetAtmScoreText;
         }
 
         private void OnDisable()
         {
             UnSubscribeEvents();
-        }
-
-        private void UnSubscribeEvents()
-        {
-            AtmSignals.Instance.onSetAtmScoreText -= OnSetAtmScoreText;
-            CoreGameSignals.Instance.onAtmTouched -= OnAtmTouched;
         }
     }
 }

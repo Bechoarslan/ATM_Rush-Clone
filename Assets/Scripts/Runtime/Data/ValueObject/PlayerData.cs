@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Runtime.Data.ValueObject
 {
@@ -12,8 +12,6 @@ namespace Runtime.Data.ValueObject
     public struct PlayerMovementData
     {
         public float ForwardSpeed;
-        public float SidewaySpeed;
-
+        public float SidewaysSpeed;
     }
-    
 }

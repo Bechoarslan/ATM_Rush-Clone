@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using Runtime.Data.ValueObject;
@@ -10,13 +10,14 @@ namespace Runtime.Commands.Stack
     public class StackAnimatorCommand
     {
         private StackManager _stackManager;
-        private StackData _data;
+        private StackData _stackData;
         private List<GameObject> _collectableStack;
 
-        public StackAnimatorCommand(StackManager stackManager, StackData data, ref List<GameObject> collectableStack)
+        public StackAnimatorCommand(StackManager stackManager, StackData stackData,
+            ref List<GameObject> collectableStack)
         {
             _stackManager = stackManager;
-            _data = data;
+            _stackData = stackData;
             _collectableStack = collectableStack;
         }
 
@@ -27,11 +28,11 @@ namespace Runtime.Commands.Stack
                 int index = (_collectableStack.Count - 1) - i;
                 _collectableStack[index].transform
                     .DOScale(
-                        new Vector3(_data.StackScaleValue, _data.StackScaleValue, _data.StackScaleValue),
-                        _data.StackAnimDuraction).SetEase(Ease.Flash);
-                _collectableStack[index].transform.DOScale(Vector3.one, _data.StackAnimDuraction)
-                    .SetDelay(_data.StackAnimDuraction).SetEase(Ease.Flash);
-                yield return new WaitForSeconds(_data.StackAnimDuraction / 3);
+                        new Vector3(_stackData.StackScaleValue, _stackData.StackScaleValue, _stackData.StackScaleValue),
+                        _stackData.StackAnimDuraction).SetEase(Ease.Flash);
+                _collectableStack[index].transform.DOScale(Vector3.one, _stackData.StackAnimDuraction)
+                    .SetDelay(_stackData.StackAnimDuraction).SetEase(Ease.Flash);
+                yield return new WaitForSeconds(_stackData.StackAnimDuraction / 3);
             }
         }
     }

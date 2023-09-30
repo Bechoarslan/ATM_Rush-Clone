@@ -1,4 +1,3 @@
-﻿using System.Collections;
 using Runtime.Extentions;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,6 +12,5 @@ namespace Runtime.Signals
         public UnityAction<Vector2> onStackFollowPlayer = delegate { };
         public UnityAction onUpdateType = delegate { };
         public UnityAction onInteractionConveyor = delegate { };
-        
     }
 }
